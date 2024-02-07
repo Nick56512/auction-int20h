@@ -1,5 +1,9 @@
+import './HomePage.scss';
+
 export const HomePage: React.FC = () => {
   return (
-    <h1 className="home-page">Welcome to Nice Gadgets store!</h1>
+    <div className="hero">
+      <h1 className="hero__title">Кожна ставка - це простягнута рука для тих, хто потребує нашої підтримки</h1>
+    </div>
   );
 };

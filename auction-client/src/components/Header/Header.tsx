@@ -1,30 +1,25 @@
 import './Header.scss';
+import {Buttons} from '../Buttons';
+// import searchIcon from '../../images/icons/';
+// import searchIcon from './search-icon.png';
+
 
 export const Header: React.FC = () => {
   return (
     <header className="header">
-      <a href="/" className="logo-link">Logo</a>
-      <nav className="nav">
-        <ul className="nav__list">
-          <li className="nav__item">
-            <a href="/apple" className="nav__link is-active">apple</a>
-          </li>
-          <li className="nav__item">
-            <a href="/samsung" className="nav__link">samsung</a>
-          </li>
-          <li className="nav__item">
-            <a href="/phones" className="nav__link">smartphones</a>
-          </li>
-          <li className="nav__item">
-            <a
-              href="/laptops&computers"
-              className="nav__link"
-            >
-              laptops & computers
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <a href="/" className="header__logo-link">Добрі справи</a>
+      <select className="header__select">
+        <option value="">Усі категорої</option>
+      </select>
+      <form className="header__search-container">
+        <button className="header__search-btn" type="submit"><img src="" alt="" /></button>
+        <input className="header__search-input" type="text" placeholder="Я шукаю бренд, модель, товар..." />
+      </form>
+      <div className="header__nav">
+        <a href="/"><img src="" alt="" /></a>
+        <a href="/"><img src="" alt="" /></a>
+      </div>
+      <Buttons/>
     </header>
   );
 };

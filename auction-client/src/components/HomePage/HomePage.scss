@@ -1,0 +1,13 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    padding: 142px 213px;
+}
+
+.hero__title {
+    font-weight: 600;
+    font-size: 64px;
+    text-align: center;
+    line-height: 120%;
+    max-width: 1014px;
+}
