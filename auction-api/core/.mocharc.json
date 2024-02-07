@@ -1,0 +1,5 @@
+{
+    "extension": ["js"],
+    "spec": "build/tests/internal/**/*.js",
+    "timeout": 5000
+}
