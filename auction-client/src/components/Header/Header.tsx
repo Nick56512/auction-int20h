@@ -1,5 +1,5 @@
 import './Header.scss';
-import {Buttons} from '../Buttons';
+import { Button } from '../Button';
 // import searchIcon from '../../images/icons/';
 // import searchIcon from './search-icon.png';
 
@@ -19,7 +19,7 @@ export const Header: React.FC = () => {
         <a href="/"><img src="" alt="" /></a>
         <a href="/"><img src="" alt="" /></a>
       </div>
-      <Buttons/>
+      <Button>Продати</Button>
     </header>
   );
 };
