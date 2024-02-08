@@ -20,28 +20,23 @@
   border: none;
 }
 
-.header__search-container {
-  display: flex;
-  background-color: #E9ECEF;
-  width: 668px;
-  padding: 12px 16px;
-}
-
-.header__search-btn {
-  background-color: #E9ECEF;
-  border: none;
-  width: 24px;
-}
-
 .header__search-input {
+  background-image: url('../../images/icons/search-icon.svg'); 
+  background-repeat: no-repeat;
+  background-position: 16px center; 
+  background-size: 24px 24px; 
   border: none;
+  width: 668px;
   background-color: #E9ECEF;
-  width: 612px;
-  height: 24px;
+  height: 48px;
+}
+
+.header__search-input::placeholder {
+  padding-left: 56px; 
 }
 
 .header__nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  gap: 25px;
 }
-

@@ -1,8 +1,8 @@
 import './Header.scss';
 import { Button } from '../Button';
-// import searchIcon from '../../images/icons/';
-// import searchIcon from './search-icon.png';
 
+import favIcon from '../../images/icons/fav-icon.svg';
+import accountIcon from '../../images/icons/account-icon.svg'
 
 export const Header: React.FC = () => {
   return (
@@ -11,15 +11,12 @@ export const Header: React.FC = () => {
       <select className="header__select">
         <option value="">Усі категорої</option>
       </select>
-      <form className="header__search-container">
-        <button className="header__search-btn" type="submit"><img src="" alt="" /></button>
-        <input className="header__search-input" type="text" placeholder="Я шукаю бренд, модель, товар..." />
-      </form>
+      <input className="header__search-input" type="text" placeholder="Я шукаю бренд, модель, товар..." />
       <div className="header__nav">
-        <a href="/"><img src="" alt="" /></a>
-        <a href="/"><img src="" alt="" /></a>
+        <a href="/"><img src={favIcon} alt="Favorite icon" /></a>
+        <a href="/"><img src={accountIcon} alt="Account icon" /></a>
       </div>
-      <Button>Продати</Button>
+      <Button>Додати лот</Button>
     </header>
   );
 };

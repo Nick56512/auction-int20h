@@ -1,0 +1,45 @@
+.lot {
+    display: grid;
+    width: 322px;
+    gap: 16px;
+}
+
+.lot-id {
+    font-size: 16px;
+    color: #868E96;
+}
+
+.lot-title {
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+}
+
+.lot-price {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.lot-info {
+    display: flex;
+    justify-content: space-between;
+    color: #868E96;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+.lot__galery {
+    position: relative;
+}
+
+.lot__galery-fav-icon img {
+    width: 24px;
+}
+
+.lot__galery-fav-icon {
+    position: absolute;
+    top: 26px;
+    left: 26px;
+}

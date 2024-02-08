@@ -16,8 +16,17 @@
   src: url(../fonts/Mont-Bold.otf);
 }
 
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+// не знаю чи це те, для обнулення 
+
+
+body {
+  width: 1440px;
+  margin: auto;
 
   // font-family: 'Mont';
   // font-style: normal;
@@ -74,6 +83,12 @@ body {
 //   }
 // }
 
-// button {
-//   font-weight: 600;
-// }
+button {
+  border: none;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}

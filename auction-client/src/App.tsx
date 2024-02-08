@@ -5,6 +5,7 @@ import { LotPage } from './pages/LotPage';
 import { AddLotPage } from './pages/AddLotPage';
 import { SearchResultsPage } from './pages/SearchResultsPage';
 import { NotFoundPage } from './pages/NotFoundPage';
+import { Footer } from './components/Footer';
 
 export const App: React.FC = () => {
   return (
@@ -22,7 +23,7 @@ export const App: React.FC = () => {
         </Routes>
       </main>
 
-      <footer className="footer" />
+      <Footer />
     </div>
   );
 };

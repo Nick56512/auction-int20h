@@ -1,0 +1,24 @@
+.pack__header {
+    margin: 120px 48px 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pack__title {
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.pack__nav-btn {
+    display: flex;
+    gap: 48px;
+}
+
+.lots-pack {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin: 24px 0 0 40px;
+}
