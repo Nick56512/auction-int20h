@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'PP Neue Montreal';
+  font-weight: 400;
+  src: url(../fonts/ppneuemontreal-book.otf) format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Neue Montreal';
+  font-weight: 500;
+  src: url(../fonts/ppneuemontreal-medium.otf) format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kyiv Type Sans';
+  font-weight: 500;
+  src: url(../fonts/KyivTypeSans-Medium.otf) format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kyiv Type Titling';
+  font-weight: 700;
+  src: url(../fonts/KyivTypeTitling-Bold.woff2) format("woff2"),
+    url(../fonts/KyivTypeTitling-Bold.woff) format("woff");
+  font-display: swap;
+}

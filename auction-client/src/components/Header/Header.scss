@@ -1,42 +1,63 @@
+@use "../../styles/utils/placeholders";
+
 .header {
-  background: #FFFFFF;
+  position: sticky;
+  top: 0;
   padding: 24px 40px;
   display: flex;
-  justify-content: space-around;
+  gap: 24px;
   align-items: center;
+  background-color: var(--white);
+  z-index: 1;
 }
 
 .header__logo-link {
+  @extend %logo-text;
+  color: var(--black);
   font-size: 20px;
-  text-decoration: none;
-  color: black;
-  font-weight: 700;
+  letter-spacing: -2px;
+
+  &:hover {
+
+  }
 }
 
 .header__select {
-  width: 149px;
+  min-width: max-content;
   font-size: 16px;
   padding: 12px;
   border: none;
 }
 
 .header__search-input {
-  background-image: url('../../images/icons/search-icon.svg'); 
+  width: 100%;
+  height: 56px;
+  padding-left: 56px;
+  border-radius: 28px;
+  color: var(--black);
+  @extend %secondary-text-medium;
+  border: 1px solid transparent;
+  background-color: var(--secondary-gray);
+  background-image: url('../../images/icons/search-icon.svg');
   background-repeat: no-repeat;
-  background-position: 16px center; 
-  background-size: 24px 24px; 
-  border: none;
-  width: 668px;
-  background-color: #E9ECEF;
-  height: 48px;
-}
+  background-position: 16px center;
+  background-size: 24px;
+  transition: all 0.3s ease-in-out;
 
-.header__search-input::placeholder {
-  padding-left: 56px; 
+  &::placeholder {
+    color: var(--gray-6);
+    font-weight: 400;
+  }
+
+  &:focus,
+  &:focus-within,
+  &:focus-visible {
+    background-color: var(--white);
+    border-color: var(--blue-pressed);
+  }
 }
 
 .header__nav {
   display: flex;
-  justify-content: space-around;
-  gap: 25px;
+  gap: 16px;
 }

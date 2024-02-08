@@ -1,13 +1,52 @@
-%small-text {
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 15px;
+%logo-text {
+  font-family: 'Kyiv Type Titling', serif;
+  font-weight: 700;
 }
 
-%uppercase {
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 11px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+%button-text {
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 500;
+}
+
+// primary text
+%primary-text {
+  font-size: 24px;
+  line-height: 150%;
+}
+%primary-text-medium {
+  @extend %primary-text;
+  font-weight: 500;
+}
+%primary-text-book {
+  @extend %primary-text;
+  font-weight: 400;
+}
+
+// secondary text
+%secondary-text {
+  font-size: 16px;
+  line-height: 150%;
+}
+%secondary-text-medium {
+  @extend %secondary-text;
+  font-weight: 500;
+}
+%secondary-text-book {
+  @extend %secondary-text;
+  font-weight: 400;
+}
+
+// tertiary text
+%tertiary-text {
+  font-size: 14px;
+  line-height: 150%;
+}
+%tertiary-text-medium {
+  @extend %tertiary-text;
+  font-weight: 500;
+}
+%tertiary-text-book {
+  @extend %tertiary-text;
+  font-weight: 400;
 }

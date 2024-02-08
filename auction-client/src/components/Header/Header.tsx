@@ -1,7 +1,7 @@
 import './Header.scss';
 import { Button } from '../Button';
 
-import favIcon from '../../images/icons/fav-icon.svg';
+import arrowLeftUp from '../../images/icons/arrow-left-up.svg';
 import accountIcon from '../../images/icons/account-icon.svg'
 
 export const Header: React.FC = () => {
@@ -13,10 +13,15 @@ export const Header: React.FC = () => {
       </select>
       <input className="header__search-input" type="text" placeholder="Я шукаю бренд, модель, товар..." />
       <div className="header__nav">
-        <a href="/"><img src={favIcon} alt="Favorite icon" /></a>
-        <a href="/"><img src={accountIcon} alt="Account icon" /></a>
+        <Button className="fav-icon-button" />
+        <Button className="icon-button">
+          <img src={accountIcon} alt="Account icon" />
+        </Button>
       </div>
-      <Button>Додати лот</Button>
+      <Button className="main-button">
+        Додати лот
+        <img src={arrowLeftUp} alt="arrow icon" />
+      </Button>
     </header>
   );
 };

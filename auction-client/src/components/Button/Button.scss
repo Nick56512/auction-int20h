@@ -1,7 +1,98 @@
-.sale-btn {
-    height: 48px;
-    width: 149px;
-    background-color: #FFFFFF;
-    border: 1px solid #212529;
-    font-size: 16px;
+.button {
+  height: 56px;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 150%;
+  white-space: nowrap;
+  border-radius: 28px;
+  border: 1px solid transparent;
+  transition: 0.3s all ease-in-out;
+
+  img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
   }
+}
+
+.main-button {
+  padding: 0 32px;
+  color: var(--white);
+  border-color: var(--blue-default);
+  background-color: var(--blue-default);
+
+  &:hover {
+    border-color: var(--blue-hovered);
+    background-color: var(--blue-hovered);
+  }
+
+  &:focus {
+    border-color: var(--blue-pressed);
+    background-color: var(--blue-pressed);
+  }
+}
+
+.secondary-button {
+  padding: 0 32px;
+  border-color: var(--secondary-gray);
+  color: var(--black);
+  background-color: transparent;
+
+  &:hover {
+    background-color: var(--secondary-gray);
+  }
+
+  &:focus {
+    border-color: var(--light-blue);
+    background-color: var(--light-blue);
+  }
+}
+
+.icon-button {
+  width: 56px;
+  justify-content: center;
+  background-color: var(--secondary-gray);
+
+  &:hover {
+    background-color: var(--gray-2);
+  }
+}
+
+.fav-icon-button {
+  position: relative;
+  width: 56px;
+  background-color: var(--secondary-gray);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    transform: translate(-50%, -50%);
+    background-image: url('../../images/icons/fav-icon-def.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    background-color: var(--gray-2);
+
+    &::before {
+      background-image: url('../../images/icons/fav-icon-hover.svg');
+    }
+  }
+
+  .selected::before {
+    background-image: url('../../images/icons/fav-icon-pressed.svg');
+  }
+}

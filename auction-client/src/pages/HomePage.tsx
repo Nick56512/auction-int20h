@@ -1,4 +1,4 @@
-import { Hero } from "src/components/Hero/Hero";
+import { Hero } from "src/components/Hero";
 import { LotsPack } from "src/components/LotsPack";
 import { CategoryPack } from "src/components/CategoryPack";
 import { FundsPack } from "src/components/FundsPack";

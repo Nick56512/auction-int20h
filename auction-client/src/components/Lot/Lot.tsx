@@ -4,14 +4,14 @@ import lotImg from '../../images/img/lot-img.png'
 import favIcon from '../../images/icons/fav-icon.svg';
 
 interface Props {
-    title: string; 
+    title: string;
   }
-  
+
   export const Lot: React.FC<Props> = ({ title }) => {
     return (
       <div className="lot">
         <div className="lot__galery">
-          <img className="lot__galery-img" src={lotImg} alt="Photo of lot" />
+          <img className="lot__galery-img" src={lotImg} alt="lot" />
           <img className="lot__galery-fav-icon" src={favIcon} alt="" />
         </div>
         <p className="lot-id">012536050</p>

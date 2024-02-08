@@ -1,11 +1,12 @@
 import './Button.scss';
 
 interface Props {
-  children: React.ReactNode;
+  children?: React.ReactNode;
+  className?: string;
 }
 
-export const Button: React.FC<Props> = ({children}) => {
+export const Button: React.FC<Props> = ({children, className = ""}) => {
     return (
-        <button className="sale-btn">{children}</button>
+        <button className={`${className} + button`}>{children}</button>
     );
   };
