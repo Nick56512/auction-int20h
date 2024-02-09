@@ -1,5 +1,6 @@
 import "./Lot.scss";
 import { Button } from "../Button";
+import { Link } from "react-router-dom";
 
 interface Props {
   title: string;
@@ -15,9 +16,10 @@ export const Lot: React.FC<Props> = ({ title, imageSrc }) => {
       </div>
       <div className="lot__description">
         <p className="lot-id">012536050</p>
-        <a className="lot-title" href="http://">
+        {/* <a className="lot-title" to="#">
           <h3>{title}</h3>
-        </a>
+        </Link> */}
+        <Link className="lot-title" to="#"><h3>{title}</h3></Link>
         <p className="lot-price">1258,00 грн</p>
         <div className="lot-info">
           <p>32 ставки</p>
