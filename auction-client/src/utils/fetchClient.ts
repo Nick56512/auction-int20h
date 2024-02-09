@@ -1,10 +1,10 @@
-const BASE_URL = '';
+const BASE_URL = "";
 
-type RequestMethod = 'GET' | 'POST' | 'PATCH' | 'DELETE';
+type RequestMethod = "GET" | "POST" | "PATCH" | "DELETE";
 
 async function request<T>(
   url: string,
-  method: RequestMethod = 'GET',
+  method: RequestMethod = "GET",
   data: any = null,
 ): Promise<T | undefined> {
   const options: RequestInit = { method };
@@ -12,7 +12,7 @@ async function request<T>(
   if (data) {
     options.body = JSON.stringify(data);
     options.headers = {
-      'Content-Type': 'application/json; charset=UTF-8',
+      "Content-Type": "application/json; charset=UTF-8",
     };
   }
 
@@ -23,14 +23,14 @@ async function request<T>(
     }
 
     return response.json();
-  } catch(e) {
+  } catch (e) {
     console.error(e);
   }
 }
 
 export const client = {
   get: <T>(url: string) => request<T>(url),
-  post: <T>(url: string, data: any) => request<T>(url, 'POST', data),
-  patch: <T>(url: string, data: any) => request<T>(url, 'PATCH', data),
-  delete: (url: string) => request(url, 'DELETE'),
+  post: <T>(url: string, data: any) => request<T>(url, "POST", data),
+  patch: <T>(url: string, data: any) => request<T>(url, "PATCH", data),
+  delete: (url: string) => request(url, "DELETE"),
 };

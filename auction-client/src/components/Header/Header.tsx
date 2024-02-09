@@ -1,25 +1,33 @@
-import './Header.scss';
-import { Button } from '../Button';
-// import searchIcon from '../../images/icons/';
-// import searchIcon from './search-icon.png';
+import "./Header.scss";
+import { Button } from "../Button";
 
+import arrowLeftUp from "../../images/icons/arrow-left-up.svg";
+import accountIcon from "../../images/icons/account-icon.svg";
 
 export const Header: React.FC = () => {
   return (
     <header className="header">
-      <a href="/" className="header__logo-link">Добрі справи</a>
+      <a href="/" className="header__logo-link">
+        Добрі справи
+      </a>
       <select className="header__select">
         <option value="">Усі категорої</option>
       </select>
-      <form className="header__search-container">
-        <button className="header__search-btn" type="submit"><img src="" alt="" /></button>
-        <input className="header__search-input" type="text" placeholder="Я шукаю бренд, модель, товар..." />
-      </form>
+      <input
+        className="header__search-input"
+        type="text"
+        placeholder="Я шукаю бренд, модель, товар..."
+      />
       <div className="header__nav">
-        <a href="/"><img src="" alt="" /></a>
-        <a href="/"><img src="" alt="" /></a>
+        <Button className="fav-icon-button" />
+        <Button className="icon-button">
+          <img src={accountIcon} alt="Account icon" />
+        </Button>
       </div>
-      <Button>Продати</Button>
+      <Button className="main-button">
+        Додати лот
+        <img src={arrowLeftUp} alt="arrow icon" />
+      </Button>
     </header>
   );
 };

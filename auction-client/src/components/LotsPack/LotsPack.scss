@@ -1,0 +1,43 @@
+@import "../../styles/utils/mixins";
+
+.pack__header {
+  margin: 120px 48px 48px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// ???
+.pack__title {
+  font-size: 53px;
+  font-weight: 500;
+
+  @include onDesktop {
+    font-size: 80px;
+  }
+}
+.pack__btn {
+  width: 36px;
+
+  @include onDesktop {
+    width: 72px;
+  }
+}
+
+.lots-pack {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+
+  @include onTablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 24px 48px;
+  }
+
+  @include onDesktop {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

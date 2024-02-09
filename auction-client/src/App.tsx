@@ -1,10 +1,11 @@
-import { Navigate, Route, Routes } from 'react-router-dom';
-import { Header } from './components/Header';
-import { HomePage } from './pages/HomePage';
-import { LotPage } from './pages/LotPage';
-import { AddLotPage } from './pages/AddLotPage';
-import { SearchResultsPage } from './pages/SearchResultsPage';
-import { NotFoundPage } from './pages/NotFoundPage';
+import { Navigate, Route, Routes } from "react-router-dom";
+import { Header } from "./components/Header";
+import { HomePage } from "./pages/HomePage";
+import { LotPage } from "./pages/LotPage";
+import { AddLotPage } from "./pages/AddLotPage";
+import { SearchResultsPage } from "./pages/SearchResultsPage";
+import { NotFoundPage } from "./pages/NotFoundPage";
+import { Footer } from "./components/Footer";
 
 export const App: React.FC = () => {
   return (
@@ -22,7 +23,7 @@ export const App: React.FC = () => {
         </Routes>
       </main>
 
-      <footer className="footer" />
+      <Footer />
     </div>
   );
 };

@@ -1,9 +1,11 @@
-import './Hero.scss';
+import "./Hero.scss";
 
 export const Hero: React.FC = () => {
   return (
-    <div className="hero">
-      <h1 className="hero__title">Кожна ставка - це простягнута рука для тих, хто потребує нашої підтримки</h1>
-    </div>
+    <section className="hero">
+      <div className="hero__container">
+        <h1 className="hero__title">Кожна ставка - це рука допомоги</h1>
+      </div>
+    </section>
   );
 };

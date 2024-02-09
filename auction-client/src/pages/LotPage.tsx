@@ -1,7 +1,7 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams } from "react-router-dom";
 
 export const LotPage: React.FC = () => {
-  const {lotId} = useParams();
+  const { lotId } = useParams();
 
   return (
     <>
