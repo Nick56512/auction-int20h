@@ -1,15 +1,21 @@
 import "./Category.scss";
+import { Button } from "../Button";
 
 interface Props {
   title: string;
+  imageSrc: string;
 }
 
-export const Category: React.FC<Props> = ({ title }) => {
+export const Category: React.FC<Props> = ({ title, imageSrc }) => {
   return (
-    <div className="category">
-      <a href="http://">
-        <h3 className="category__title">{title}</h3>
-      </a>
-    </div>
+    <>
+      <Button className="secondary-button category">
+        {imageSrc ? (
+          <img src={imageSrc} alt={title} className="category__image img" />
+        ) : (
+          <h3 className="category__title">{title}</h3>
+        )}
+      </Button>
+    </>
   );
 };

@@ -6,7 +6,7 @@ import { FundsPack } from "src/components/FundsPack";
 export const HomePage: React.FC = () => {
   return (
     <>
-      <Hero />
+      {/* <Hero /> */}
       <LotsPack title="Активні лоти" />
       <LotsPack title="Популярні лоти" />
       <CategoryPack title="Категорії лотів" />

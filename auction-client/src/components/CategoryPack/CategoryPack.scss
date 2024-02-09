@@ -1,13 +1,27 @@
-.pack__link {
-  font-size: 20px;
-  font-weight: 600;
+@import "../../styles/utils/mixins";
+
+.pack__nav-btn {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .category-pack {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   align-items: center;
   gap: 24px;
-  margin: 24px 0 0 40px;
+
+  @include onTablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 24px 0 0 24px;
+  }
+
+  @include onDesktop {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-self: center;
+    justify-self: center;
+  }
 }

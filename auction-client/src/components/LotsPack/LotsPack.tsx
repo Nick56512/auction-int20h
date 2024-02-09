@@ -1,8 +1,11 @@
 import "./LotsPack.scss";
 import { Lot } from "../Lot";
 
-import arrowRight from "../../images/icons/arrow-right.svg";
-import arrowLeft from "../../images/icons/arrow-left.svg";
+import arrowLeftUp from "../../images/icons/arrow-up.svg";
+import setLotImg from "../../images/img/set-lot.png";
+import billLotImg from "../../images/img/bill-lot.png";
+import bookLotImg from "../../images/img/book-lot.png";
+import postcardLotImg from "../../images/img/postcard-lot.png";
 
 interface Props {
   title: string;
@@ -13,20 +16,21 @@ export const LotsPack: React.FC<Props> = ({ title }) => {
     <section>
       <div className="pack__header">
         <h2 className="pack__title">{title}</h2>
-        <div className="pack__nav-btn">
-          <button>
-            <img src={arrowLeft} alt="" />
-          </button>
-          <button>
-            <img src={arrowRight} alt="" />
-          </button>
-        </div>
+        <img className="pack__btn" src={arrowLeftUp} alt="" />
+        {/* Як посилання */}
       </div>
       <div className="lots-pack">
-        <Lot title="Ексклюзивний набір: Дари доброти та надії" />
-        <Lot title="Діамантова світлина - шлях до сяйва" />
-        <Lot title="Літературна скарбниця: Книжки для добрих справ" />
-        <Lot title="Листівки любові для допомоги дітям з Маріуполя " />
+        <Lot title="Ексклюзивний набір: Дари добро..." imageSrc={setLotImg} />
+        {/* Не знаю як поробити ці ... в кінці */}
+        <Lot
+          title="Пам'ятна банкнота &quot;Пам'ятаємо! Не п..."
+          imageSrc={billLotImg}
+        />
+        <Lot title="Літературна скарбниця: Книжк..." imageSrc={bookLotImg} />
+        <Lot
+          title="Листівки любові для допомоги дітя... "
+          imageSrc={postcardLotImg}
+        />
       </div>
     </section>
   );

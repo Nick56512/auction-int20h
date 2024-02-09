@@ -44,6 +44,11 @@
   color: var(--black);
   background-color: transparent;
 
+  .img{
+    width: 322px;
+    height: 160px;
+  }
+
   &:hover {
     background-color: var(--secondary-gray);
   }

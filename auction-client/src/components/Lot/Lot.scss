@@ -1,44 +1,50 @@
+@use "../../styles/utils/placeholders";
+
 .lot {
   display: grid;
-  width: 322px;
+  align-self: center;
+  justify-self: center;
   gap: 16px;
-}
-
-.lot-id {
-  font-size: 16px;
-  color: #868e96;
-}
-
-.lot-title {
-  font-size: 20px;
-  font-weight: 400;
-  text-decoration: none;
-  color: black;
-}
-
-.lot-price {
-  font-weight: 600;
-  font-size: 24px;
-}
-
-.lot-info {
-  display: flex;
-  justify-content: space-between;
-  color: #868e96;
-  font-size: 14px;
-  font-weight: 400;
+  max-width: 322px;
 }
 
 .lot__galery {
   position: relative;
 }
 
-.lot__galery-fav-icon img {
-  width: 24px;
+.lot__galery-img {
+  border-radius: 44px 44px 0 0;
 }
 
-.lot__galery-fav-icon {
-  position: absolute;
-  top: 26px;
-  left: 26px;
+.lot {
+  .lot__galery-fav-icon {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+  }
+}
+
+.lot__description {
+  display: grid;
+  gap: 8px;
+  padding: 0 16px;
+}
+
+.lot-id {
+  @extend %tertiary-text-book;
+  color: var(--gray-4);
+}
+
+.lot-price {
+  @extend %secondary-text-medium;
+  color: var(--gray-5);
+  margin-top: 8px;
+}
+
+.lot-info {
+  display: flex;
+  justify-content: space-between;
+  color: var(--gray-4);
+  @extend %tertiary-text-book;
+  margin-top: 8px;
 }
