@@ -7,7 +7,7 @@ import "./index.scss";
 const root = createRoot(document.getElementById("root") as HTMLElement);
 
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/auction-int20h/auction-client">
     <App />
   </BrowserRouter>,
 );
