@@ -1,15 +1,17 @@
 import "./Header.scss";
 import { Button } from "../Button";
+import { Link } from "react-router-dom";
 
 import arrowLeftUp from "../../images/icons/arrow-left-up.svg";
 import accountIcon from "../../images/icons/account-icon.svg";
 
+
 export const Header: React.FC = () => {
   return (
     <header className="header">
-      <a href="/" className="header__logo-link">
+      <Link to="#" className="header__logo-link">
         Добрі справи
-      </a>
+      </Link>
       <select className="header__select">
         <option value="">Усі категорої</option>
       </select>
