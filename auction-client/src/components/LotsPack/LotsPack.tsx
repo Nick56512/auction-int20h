@@ -1,13 +1,12 @@
-import './LotsPack.scss';
-import { Lot } from '../Lot';
+import "./LotsPack.scss";
+import { Lot } from "../Lot";
 
-import arrowRight from '../../images/icons/arrow-right.svg';
-import arrowLeft from '../../images/icons/arrow-left.svg'
+import arrowRight from "../../images/icons/arrow-right.svg";
+import arrowLeft from "../../images/icons/arrow-left.svg";
 
 interface Props {
   title: string;
 }
-
 
 export const LotsPack: React.FC<Props> = ({ title }) => {
   return (
@@ -15,8 +14,12 @@ export const LotsPack: React.FC<Props> = ({ title }) => {
       <div className="pack__header">
         <h2 className="pack__title">{title}</h2>
         <div className="pack__nav-btn">
-          <button><img src={arrowLeft} alt="" /></button>
-          <button><img src={arrowRight} alt="" /></button>
+          <button>
+            <img src={arrowLeft} alt="" />
+          </button>
+          <button>
+            <img src={arrowRight} alt="" />
+          </button>
         </div>
       </div>
       <div className="lots-pack">

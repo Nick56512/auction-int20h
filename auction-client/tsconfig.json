@@ -24,7 +24,7 @@
     "src/**/*.tsx",
     "src/**/*.ts",
     "src/**/*.jsx",
-    "src/**/*.js",
+    "src/**/*.js"
   ],
   "exclude": ["./node_modules/**"]
 }

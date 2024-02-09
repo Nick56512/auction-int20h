@@ -1,1 +1,1 @@
-export * from './CategoryPack';
+export * from "./CategoryPack";

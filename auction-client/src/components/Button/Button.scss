@@ -77,7 +77,7 @@
     width: 24px;
     height: 24px;
     transform: translate(-50%, -50%);
-    background-image: url('../../images/icons/fav-icon-def.svg');
+    background-image: url("../../images/icons/fav-icon-def.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -88,11 +88,11 @@
     background-color: var(--gray-2);
 
     &::before {
-      background-image: url('../../images/icons/fav-icon-hover.svg');
+      background-image: url("../../images/icons/fav-icon-hover.svg");
     }
   }
 
   .selected::before {
-    background-image: url('../../images/icons/fav-icon-pressed.svg');
+    background-image: url("../../images/icons/fav-icon-pressed.svg");
   }
 }

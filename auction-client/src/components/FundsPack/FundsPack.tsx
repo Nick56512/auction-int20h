@@ -1,7 +1,6 @@
-import '../CategoryPack/CategoryPack.scss';
+import "../CategoryPack/CategoryPack.scss";
 
-import { Category } from '../Category';
-
+import { Category } from "../Category";
 
 interface Props {
   title: string;
@@ -12,7 +11,9 @@ export const FundsPack: React.FC<Props> = ({ title }) => {
     <section>
       <div className="pack__header">
         <h2 className="pack__title">{title}</h2>
-        <a className="pack__link" href="http://">Переглянути всі</a>
+        <a className="pack__link" href="http://">
+          Переглянути всі
+        </a>
       </div>
       <div className="category-pack">
         <Category title="Фонд 1" />

@@ -1,1 +1,1 @@
-export * from './FundsPack';
+export * from "./FundsPack";

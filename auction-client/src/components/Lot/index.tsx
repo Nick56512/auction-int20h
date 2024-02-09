@@ -1,1 +1,1 @@
-export * from './Lot';
+export * from "./Lot";

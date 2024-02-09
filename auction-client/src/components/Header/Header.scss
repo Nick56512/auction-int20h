@@ -18,7 +18,6 @@
   letter-spacing: -2px;
 
   &:hover {
-
   }
 }
 
@@ -38,7 +37,7 @@
   @extend %secondary-text-medium;
   border: 1px solid transparent;
   background-color: var(--secondary-gray);
-  background-image: url('../../images/icons/search-icon.svg');
+  background-image: url("../../images/icons/search-icon.svg");
   background-repeat: no-repeat;
   background-position: 16px center;
   background-size: 24px;
