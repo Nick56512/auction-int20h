@@ -2,7 +2,7 @@
   "name": "auction-client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nick56512.github.io/auction-int20h/auction-client/",
+  "homepage": "https://nick56512.github.io/auction-int20h/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
