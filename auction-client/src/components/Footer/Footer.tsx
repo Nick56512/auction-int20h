@@ -1,8 +1,10 @@
 import "./Footer.scss";
+import { Link } from "react-router-dom";
 
 import emailIcon from "../../images/icons/email-icon.svg";
 import twitterIcon from "../../images/icons/twitter-icon.svg";
 import instIcon from "../../images/icons/inst-icon.svg";
+
 
 export const Footer: React.FC = () => {
   return (
@@ -10,81 +12,82 @@ export const Footer: React.FC = () => {
       <div className="fotter__menu">
         <div className="footer__menu-items">
           <h5 className="footer__menu-title">Про Добрі справи</h5>
-          <a className="footer__menu-link" href="/">
+          <Link className="footer__menu-link" to="#">
             Умови співпраці
-          </a>
-          <a className="footer__menu-link" href="/">
+          </Link>
+          
+          <Link className="footer__menu-link" to="#">
             Партнерство
-          </a>
-          <a className="footer__menu-link" href="/">
+          </Link>
+          <Link className="footer__menu-link" to="#">
             Пресс матеріали
-          </a>
+          </Link>
         </div>
         <div className="footer__menu-items">
           <h5 className="footer__menu-title">Придбати</h5>
-          <a className="footer__menu-link" href="/">
+          <Link className="footer__menu-link" to="#">
             Як придбати?
-          </a>
-          <a className="footer__menu-link" href="/">
+          </Link>
+          <Link className="footer__menu-link" to="#">
             Поради покупцям
-          </a>
-          <a className="footer__menu-link" href="/">
+          </Link>
+          <Link className="footer__menu-link" to="#">
             Умови купівлі
-          </a>
+          </Link>
         </div>
         <div className="footer__menu-items">
           <h5 className="footer__menu-title">Продати</h5>
-          <a className="footer__menu-link" href="/">
+          <Link className="footer__menu-link" to="#">
             Як продати?
-          </a>
-          <a className="footer__menu-link" href="/">
+          </Link>
+          <Link className="footer__menu-link" to="#">
             Поради продавцям
-          </a>
-          <a className="footer__menu-link" href="/">
+          </Link>
+          <Link className="footer__menu-link" to="#">
             Умови продажів
-          </a>
+          </Link>
         </div>
         <div className="footer__menu-items">
           <h5 className="footer__menu-title">Мій акаунт</h5>
-          <a className="footer__menu-link" href="/">
+          <Link className="footer__menu-link" to="#">
             Вхід в акаунт
-          </a>
-          <a className="footer__menu-link" href="/">
+          </Link>
+          <Link className="footer__menu-link" to="#">
             Реєстрація
-          </a>
-          <a className="footer__menu-link" href="/">
+          </Link>
+          <Link className="footer__menu-link" to="#">
             Обрані лоти
-          </a>
+          </Link>
         </div>
       </div>
       <div className="footer__contacts">
         <div className="footer__contacts-soc">
-          <a
-            href="mailto:auction@gmail.com"
+          <Link
+            to="mailto:auction@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             {" "}
             <img src={emailIcon} alt="Email link" />
-          </a>
-          <a
-            href="https://twitter.com/"
+          </Link>
+          <Link
+            to="https://twitter.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src={twitterIcon} alt="Twitter link" />
-          </a>
-          <a
-            href="https://www.instagram.com"
+          </Link>
+          <Link
+            to="https://www.instagram.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src={instIcon} alt="Instagram link" />
-          </a>
+          </Link>
         </div>
-        <a className="footer__contacts-mail" href="mailto:auction@gmail.com">
+        <Link className="footer__contacts-mail" to="mailto:auction@gmail.com">
           auction@gmail.com
-        </a>
+        </Link>
       </div>
     </footer>
   );
