@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/auction-int20h/auction-client/static/css/main.6122ef25.css",
-    "main.js": "/auction-int20h/auction-client/static/js/main.1a11d152.js",
+    "main.js": "/auction-int20h/auction-client/static/js/main.99eb23d8.js",
     "static/media/bill-lot.png": "/auction-int20h/auction-client/static/media/bill-lot.0c348225b412742a7426.png",
     "static/media/postcard-lot.png": "/auction-int20h/auction-client/static/media/postcard-lot.6be5e4838a351ed94345.png",
     "static/media/book-lot.png": "/auction-int20h/auction-client/static/media/book-lot.979317f4bf9cb59bb66e.png",
@@ -24,10 +24,10 @@
     "static/media/arrow-up.svg": "/auction-int20h/auction-client/static/media/arrow-up.c356b370f59e359ca0defd494a7dda26.svg",
     "index.html": "/auction-int20h/auction-client/index.html",
     "main.6122ef25.css.map": "/auction-int20h/auction-client/static/css/main.6122ef25.css.map",
-    "main.1a11d152.js.map": "/auction-int20h/auction-client/static/js/main.1a11d152.js.map"
+    "main.99eb23d8.js.map": "/auction-int20h/auction-client/static/js/main.99eb23d8.js.map"
   },
   "entrypoints": [
     "static/css/main.6122ef25.css",
-    "static/js/main.1a11d152.js"
+    "static/js/main.99eb23d8.js"
   ]
 }
