@@ -15,7 +15,7 @@
   @include onTablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 24px 0 0 24px;
+    padding: 0 40px;
   }
 
   @include onDesktop {
@@ -23,5 +23,6 @@
     grid-template-columns: repeat(4, 1fr);
     align-self: center;
     justify-self: center;
+    padding:  0 40px;
   }
 }

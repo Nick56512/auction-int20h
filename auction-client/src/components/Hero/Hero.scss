@@ -1,6 +1,7 @@
 .hero {
   display: flex;
   justify-content: center;
+  margin-bottom: 64px;
   padding: 0 8px;
 }
 
@@ -15,5 +16,4 @@
   font-size: 64px;
   text-align: center;
   line-height: 120%;
-  max-width: 1014px;
 }
