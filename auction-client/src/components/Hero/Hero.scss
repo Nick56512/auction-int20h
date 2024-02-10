@@ -1,19 +1,32 @@
+@import "../../styles/utils/mixins";
+
 .hero {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
   padding: 0 8px;
+
+  @include onTablet() {
+    margin-bottom: 64px;
+  }
 }
 
 .hero__container {
-  padding: 142px 213px;
-  background: linear-gradient(to bottom left, #b7cbdf, #8385cd);
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  height: 320px;
+  color: var(--white);
   border-radius: 16px;
-}
+  background-image: url("../../images/img/people-holding-hands.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
-.hero__title {
-  font-weight: 600;
-  font-size: 64px;
-  text-align: center;
-  line-height: 120%;
+  @include onTablet() {
+    padding: 40px;
+    height: 440px;
+  }
+
+  @include onDesktop() {
+    height: 670px;
+  }
 }
