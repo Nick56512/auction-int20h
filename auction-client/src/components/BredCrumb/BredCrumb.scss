@@ -1,0 +1,28 @@
+@use "../../styles/utils/placeholders";
+@import "../../styles/utils/mixins";
+
+.breadcrumb {
+  padding: 0 40px 24px;
+  @extend %tertiary-text-book;
+
+  @include onTablet {
+    font-size: 16px;
+  }
+}
+
+.main-page {
+  margin-right: 16px;
+  color: var(--gray-4);
+}
+
+.breadcrumb ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  display: inline-block;
+  content: url(../../images/icons/dropright.svg);
+  margin-left: 16px;
+}

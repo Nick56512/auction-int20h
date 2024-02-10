@@ -10,7 +10,7 @@ import close from "../../images/icons/close.svg";
 import dropdown from "../../images/icons/dropdown.svg";
 
 import { useState, useEffect, useRef } from "react";
-import { useOnClickOutside } from 'usehooks-ts'
+import { useOnClickOutside } from "usehooks-ts";
 import { categories } from "src/utils/mockData";
 
 export const Header: React.FC = () => {
@@ -34,8 +34,10 @@ export const Header: React.FC = () => {
     const handleWindowResize = () => {
       setWindowWidth(window.innerWidth);
     };
-    document.documentElement.style.setProperty('--scrollbar-width',
-      (window.innerWidth - document.documentElement.clientWidth) + 'px');
+    document.documentElement.style.setProperty(
+      "--scrollbar-width",
+      window.innerWidth - document.documentElement.clientWidth + "px",
+    );
 
     window.addEventListener("resize", handleWindowResize);
 
@@ -46,9 +48,8 @@ export const Header: React.FC = () => {
 
   const handleClickOutside = () => {
     setOpenDropdown(false);
-  }
-  useOnClickOutside(ref, handleClickOutside)
-
+  };
+  useOnClickOutside(ref, handleClickOutside);
 
   if (windowWidth <= 1024) {
     return (
@@ -73,27 +74,41 @@ export const Header: React.FC = () => {
           </Button>
 
           <div className="burger-menu__content">
-            <Link to="/" className="header__logo-link" onClick={closeBurgerMenu}>
+            <Link
+              to="/"
+              className="header__logo-link"
+              onClick={closeBurgerMenu}
+            >
               Добрі справи
             </Link>
-            <div className={classNames("dropdown", { open: openDropdown })}
-            ref={ref}>
-              <div className="dropdown__main-option" onClick={() => setOpenDropdown(!openDropdown)}>
-                <p>{selected || 'Усі категорії'}</p>
-                <img className="dropdown__icon" src={dropdown} alt="dropdown icon" />
+            <div
+              className={classNames("dropdown", { open: openDropdown })}
+              ref={ref}
+            >
+              <div
+                className="dropdown__main-option"
+                onClick={() => setOpenDropdown(!openDropdown)}
+              >
+                <p>{selected || "Усі категорії"}</p>
+                <img
+                  className="dropdown__icon"
+                  src={dropdown}
+                  alt="dropdown icon"
+                />
               </div>
 
               <ul className="dropdown__menu">
-                {categories.map((str) =>
-                  (
-                    <li className="dropdown__menu__items" onClick={() => {
-                      setOpenDropdown(false)
+                {categories.map((str) => (
+                  <li
+                    className="dropdown__menu__items"
+                    onClick={() => {
+                      setOpenDropdown(false);
                       setSelected(str);
-                    }}>
-                      <p>{str}</p>
-                    </li>
-                  )
-                )}
+                    }}
+                  >
+                    <p>{str}</p>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="header__nav">
@@ -102,7 +117,12 @@ export const Header: React.FC = () => {
                 <img src={accountIcon} alt="Account icon" />
               </Button>
             </div>
-            <Button className="main-button" role="link" to="/add-lot" onClick={closeBurgerMenu}>
+            <Button
+              className="main-button"
+              role="link"
+              to="/add-lot"
+              onClick={closeBurgerMenu}
+            >
               Додати лот
               <img src={arrowLeftUp} alt="arrow icon" />
             </Button>
@@ -117,24 +137,27 @@ export const Header: React.FC = () => {
       <Link to="/" className="header__logo-link">
         Добрі справи
       </Link>
-      <div className={classNames("dropdown", { open: openDropdown })}
-      ref={ref}>
-        <div className="dropdown__main-option" onClick={() => setOpenDropdown(!openDropdown)}>
-          <p>{selected || 'Усі категорії'}</p>
+      <div className={classNames("dropdown", { open: openDropdown })} ref={ref}>
+        <div
+          className="dropdown__main-option"
+          onClick={() => setOpenDropdown(!openDropdown)}
+        >
+          <p>{selected || "Усі категорії"}</p>
           <img className="dropdown__icon" src={dropdown} alt="dropdown icon" />
         </div>
 
         <ul className="dropdown__menu">
-          {categories.map((str) =>
-             (
-              <li className="dropdown__menu__items" onClick={() => {
-                setOpenDropdown(false)
+          {categories.map((str) => (
+            <li
+              className="dropdown__menu__items"
+              onClick={() => {
+                setOpenDropdown(false);
                 setSelected(str);
-              }}>
-                <p>{str}</p>
-              </li>
-            )
-          )}
+              }}
+            >
+              <p>{str}</p>
+            </li>
+          ))}
         </ul>
       </div>
       <input

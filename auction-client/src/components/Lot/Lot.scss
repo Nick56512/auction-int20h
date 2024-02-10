@@ -1,11 +1,16 @@
 @use "../../styles/utils/placeholders";
+@import "../../styles/utils/mixins";
 
 .lot {
   display: grid;
   align-self: center;
   justify-self: center;
   gap: 16px;
-  max-width: 322px;
+  max-width: 343px;
+
+  @include onTablet {
+    max-width: 322px;
+  }
 }
 
 .lot__galery {
@@ -24,6 +29,15 @@
   }
 }
 
+.lot-title {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
 .lot__description {
   display: grid;
   gap: 8px;
@@ -36,15 +50,15 @@
 }
 
 .lot-price {
+  margin-top: 8px;
   @extend %secondary-text-medium;
   color: var(--gray-5);
-  margin-top: 8px;
 }
 
 .lot-info {
   display: flex;
   justify-content: space-between;
+  margin-top: 8px;
   color: var(--gray-4);
   @extend %tertiary-text-book;
-  margin-top: 8px;
 }

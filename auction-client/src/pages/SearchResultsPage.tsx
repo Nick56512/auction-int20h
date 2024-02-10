@@ -1,13 +1,10 @@
-import { Link } from "react-router-dom";
+import { BredCrumb } from "src/components/BredCrumb";
 import { LotsPack } from "src/components/LotsPack";
 
 export const SearchResultsPage: React.FC = () => {
   return (
     <>
-      {/* посилання щоб перейти*/}
-      <Link to="/">HomePage</Link>
-      <br />
-      <Link to="/lot">LotPage</Link>
+      <BredCrumb name="Результати пошуку" />
       <LotsPack
         title="Результати пошуку"
         className="pack__header__results-mode"

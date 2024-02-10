@@ -1,0 +1,103 @@
+@use "../styles/utils/placeholders";
+@import "../styles/utils/mixins";
+
+.lot-page__header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 40px;
+
+  @include onDesktop {
+    flex-direction: row;
+    gap: 0;
+  }
+}
+
+.lot-page__header-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+
+  @include onTablet {
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 120%;
+  }
+}
+
+.lot-page__info-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @include onDesktop {
+    position: static;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.lot-page__buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 16px 24px;
+
+  @include onDesktop {
+    gap: 24px;
+    margin-right: 40px;
+  }
+}
+
+.lot-page__info {
+  position: absolute;
+  top: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 24px 40px;
+  @extend %secondary-text-book;
+
+  @include onTablet {
+    top: 560px;
+  }
+
+  @include onDesktop {
+    position: static;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 75px;
+    font-size: 24px;
+  }
+}
+
+.lot-page__info-text {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.lot-page__galery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.lot-page__galery img {
+  max-width: 320px;
+
+  @include onTablet {
+    max-width: 584px;
+  }
+}
+
+.lot-page__galery-small {
+  display: none;
+
+  @include onDesktop {
+    display: flex;
+    flex-direction: column;
+  }
+}
