@@ -11,7 +11,7 @@
   line-height: 150%;
   white-space: nowrap;
   border-radius: 28px;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   transition: 0.3s all ease-in-out;
 
   img {
@@ -39,24 +39,30 @@
   }
 }
 
+// поміняла кольори, і додала щоб категорії нормально вписували зображення
 .secondary-button {
+  position: relative;
   padding: 0 32px;
-  border-color: var(--secondary-gray);
+  border-color: var(--secondary-light-blue);
   color: var(--black);
   background-color: transparent;
 
   .img {
-    width: 322px;
-    height: 160px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 28px;
   }
 
   &:hover {
+    border-color: var(--white);
     background-color: var(--secondary-gray);
   }
 
   &:focus {
-    border-color: var(--light-blue);
-    background-color: var(--light-blue);
+    border-color: var(--secondary-light-blue);
+    background-color: var(--secondary-light-blue);
   }
 }
 
