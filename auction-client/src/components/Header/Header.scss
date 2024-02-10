@@ -1,4 +1,5 @@
 @use "../../styles/utils/placeholders";
+@import "../../styles/utils/mixins";
 
 .header {
   position: sticky;
@@ -9,6 +10,39 @@
   align-items: center;
   background-color: var(--white);
   z-index: 1;
+
+  &.mobile {
+    justify-content: space-between;
+  }
+}
+
+.burger-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(100%);
+  background-color: var(--secondary-light-blue);
+
+  &.open {
+    transform: translateX(0);
+  }
+}
+
+.burger-menu__content {
+  padding: 24px 120px 24px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.burger-close-btn {
+  position: absolute;
+  top: 24px;
+  right: calc(var(--scrollbar-width) + 40px);
 }
 
 .header__logo-link {
@@ -16,16 +50,68 @@
   color: var(--black);
   font-size: 20px;
   letter-spacing: -2px;
+  max-width: 100px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
+    color: var(--blue-hovered);
   }
 }
 
-.header__select {
+.dropdown {
+  position: relative;
   min-width: max-content;
-  font-size: 16px;
-  padding: 12px;
-  border: none;
+  max-width: 500px;
+  display: flex;
+  @extend %secondary-text-book;
+  cursor: pointer;
+
+  &__main-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 150px;
+    max-width: 500px;
+    gap: 4px;
+    flex-grow: 0;
+    padding: 12px;
+    height: 48px;
+    background-color: var(--white);
+    border-radius: 24px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+  }
+
+  &__menu {
+    display: none;
+    min-width: 150px;
+    border-radius: 24px;
+    background-color: var(--white);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translateY(4px);
+    border: 2px solid var(--gray-2);
+    z-index: 1;
+
+    &__items {
+      padding: 12px 16px;
+    }
+  }
+
+  &.open {
+    .dropdown__main-option {
+      border-color: var(--blue-pressed);
+    }
+
+    .dropdown__menu {
+      display: block;
+    }
+  }
 }
 
 .header__search-input {
@@ -35,7 +121,7 @@
   border-radius: 28px;
   color: var(--black);
   @extend %secondary-text-medium;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   background-color: var(--secondary-gray);
   background-image: url("../../images/icons/search-icon.svg");
   background-repeat: no-repeat;

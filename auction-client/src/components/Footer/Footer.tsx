@@ -5,7 +5,6 @@ import emailIcon from "../../images/icons/email-icon.svg";
 import twitterIcon from "../../images/icons/twitter-icon.svg";
 import instIcon from "../../images/icons/inst-icon.svg";
 
-
 export const Footer: React.FC = () => {
   return (
     <footer className="footer">
@@ -15,7 +14,7 @@ export const Footer: React.FC = () => {
           <Link className="footer__menu-link" to="#">
             Умови співпраці
           </Link>
-          
+
           <Link className="footer__menu-link" to="#">
             Партнерство
           </Link>
