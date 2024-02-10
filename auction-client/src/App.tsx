@@ -1,7 +1,11 @@
-import { Navigate, Route, Routes } from 'react-router-dom';
-import { Header } from './components/Header';
-import { HomePage } from './components/HomePage';
-import { PhonePage } from './components/PhonePage';
+import { Navigate, Route, Routes } from "react-router-dom";
+import { Header } from "./components/Header";
+import { HomePage } from "./pages/HomePage";
+import { LotPage } from "./pages/LotPage";
+import { AddLotPage } from "./pages/AddLotPage";
+import { SearchResultsPage } from "./pages/SearchResultsPage";
+import { NotFoundPage } from "./pages/NotFoundPage";
+import { Footer } from "./components/Footer";
 
 export const App: React.FC = () => {
   return (
@@ -12,13 +16,14 @@ export const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/home" element={<Navigate to="/" />} />
-          <Route path="*" element={<h1>Page not found</h1>} />
-          <Route path="/phones" element={<PhonePage />} />
+          <Route path="/lots/:lotId" element={<LotPage />} />
+          <Route path="/add-lot" element={<AddLotPage />} />
+          <Route path="/search" element={<SearchResultsPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
 
-      <footer className="footer" />
-
+      <Footer />
     </div>
   );
 };

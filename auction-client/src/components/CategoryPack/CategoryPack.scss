@@ -1,0 +1,28 @@
+@import "../../styles/utils/mixins";
+
+.pack__nav-btn {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.category-pack {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+
+  @include onTablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 40px;
+  }
+
+  @include onDesktop {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-self: center;
+    justify-self: center;
+    padding: 0 40px;
+  }
+}

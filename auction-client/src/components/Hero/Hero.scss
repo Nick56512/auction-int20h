@@ -1,0 +1,32 @@
+@import "../../styles/utils/mixins";
+
+.hero {
+  margin-bottom: 32px;
+  padding: 0 8px;
+
+  @include onTablet() {
+    margin-bottom: 64px;
+  }
+}
+
+.hero__container {
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  height: 320px;
+  color: var(--white);
+  border-radius: 16px;
+  background-image: url("../../images/img/people-holding-hands.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include onTablet() {
+    padding: 40px;
+    height: 440px;
+  }
+
+  @include onDesktop() {
+    height: 670px;
+  }
+}
