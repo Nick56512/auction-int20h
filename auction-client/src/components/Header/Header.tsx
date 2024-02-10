@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import classNames from "classnames";
 
 import arrowLeftUp from "../../images/icons/arrow-left-up.svg";
+import favIcon from "../../images/icons/fav-icon.svg";
 import accountIcon from "../../images/icons/account-icon.svg";
 import burger from "../../images/icons/burger.svg";
 import close from "../../images/icons/close.svg";
@@ -81,42 +82,24 @@ export const Header: React.FC = () => {
             >
               Добрі справи
             </Link>
-            <div
-              className={classNames("dropdown", { open: openDropdown })}
-              ref={ref}
-            >
-              <div
-                className="dropdown__main-option"
-                onClick={() => setOpenDropdown(!openDropdown)}
-              >
-                <p>{selected || "Усі категорії"}</p>
-                <img
-                  className="dropdown__icon"
-                  src={dropdown}
-                  alt="dropdown icon"
-                />
-              </div>
-
-              <ul className="dropdown__menu">
+            <div>
+              <p>Категорії:</p>
+              <ul className="menu__categories">
                 {categories.map((str) => (
-                  <li
-                    className="dropdown__menu__items"
-                    onClick={() => {
-                      setOpenDropdown(false);
-                      setSelected(str);
-                    }}
-                  >
+                  <li className="menu__categories__items">
                     <p>{str}</p>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="header__nav">
-              <Button className="fav-icon-button" />
-              <Button className="icon-button">
-                <img src={accountIcon} alt="Account icon" />
-              </Button>
-            </div>
+            <Button className="secondary-button">
+              <img src={favIcon} alt="Account icon" />
+              Додати в обране
+            </Button>
+            <Button className="secondary-button">
+              <img src={accountIcon} alt="Account icon" />
+              Мій кабінет
+            </Button>
             <Button
               className="main-button"
               role="link"

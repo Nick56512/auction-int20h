@@ -11,6 +11,7 @@
   font-size: 18px;
   font-weight: 500;
   line-height: 150%;
+  flex-shrink: 0;
   white-space: nowrap;
   border-radius: 28px;
   border: 2px solid transparent;
@@ -47,6 +48,7 @@
   border-color: var(--secondary-light-blue);
   color: var(--black);
   background-color: transparent;
+  mix-blend-mode: multiply;
 
   .img {
     position: absolute;
