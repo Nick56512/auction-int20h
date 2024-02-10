@@ -8,14 +8,12 @@ interface Props {
 
 export const Category: React.FC<Props> = ({ title, imageSrc }) => {
   return (
-    <>
-      <Button className="secondary-button category">
-        {imageSrc ? (
-          <img src={imageSrc} alt={title} className="category__image img" />
-        ) : (
-          <h3 className="category__title">{title}</h3>
-        )}
-      </Button>
-    </>
+    <Button className="secondary-button category">
+      {imageSrc ? (
+        <img src={imageSrc} alt={title} className="category__image img" />
+      ) : (
+        <h3 className="category__title">{title}</h3>
+      )}
+    </Button>
   );
 };

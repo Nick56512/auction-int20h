@@ -1,17 +1,23 @@
 @use "../../styles/utils/placeholders";
+@import "../../styles/utils/mixins";
 
 .header {
   position: sticky;
   top: 0;
-  padding: 24px 40px;
+  padding: 16px;
   display: flex;
-  gap: 24px;
+  gap: 8px;
   align-items: center;
   background-color: var(--white);
   z-index: 1;
 
   &.mobile {
     justify-content: space-between;
+  }
+
+  @include onSmallDesktop() {
+    padding: 24px 40px;
+    gap: 24px;
   }
 }
 
@@ -36,10 +42,11 @@
 }
 
 .burger-menu__content {
-  padding: 24px 120px 24px 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  padding: 16px;
+  display: grid;
+  height: 100%;
+  grid-template-rows: max-content 1fr max-content;
+  gap: 24px;
   @extend %secondary-text-medium;
   max-height: 100vh;
   overflow: auto;
@@ -47,16 +54,17 @@
 
 .burger-close-btn {
   position: absolute;
-  top: 24px;
-  right: calc(var(--scrollbar-width) + 40px);
+  top: 16px;
+  right: calc(var(--scrollbar-width) + 16px);
 }
 
 .header__logo-link {
   @extend %logo-text;
   color: var(--black);
   font-size: 20px;
+  line-height: 16px;
   letter-spacing: -2px;
-  max-width: 100px;
+  max-width: 80px;
   height: 56px;
   display: flex;
   align-items: center;
@@ -65,6 +73,10 @@
 
   &:hover {
     color: var(--blue-hovered);
+  }
+
+  @include onSmallDesktop() {
+    max-width: 100px;
   }
 }
 
@@ -132,19 +144,32 @@
   }
 }
 
+.menu__categories-title {
+  margin-bottom: 24px;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 100%;
+}
+
 .menu__categories {
   display: flex;
   flex-direction: column;
   @extend %secondary-text-medium;
-  gap: 12px;
-  padding: 10px 0 0 12px;
+  gap: 8px;
 
-  &__items {
-    min-width: 150px;
-    width: max-content;
+  & &__item {
     border-radius: 24px;
-    padding: 12px 16px;
-    background-color: var(--secondary-light-blue);
+    width: 100%;
+    padding: 8px 16px;
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 500;
+    justify-content: space-between;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
   }
 }
 
@@ -179,4 +204,5 @@
 .header__nav {
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
 }

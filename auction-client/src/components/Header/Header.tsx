@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import classNames from "classnames";
 
 import arrowLeftUp from "../../images/icons/arrow-left-up.svg";
-import favIcon from "../../images/icons/fav-icon.svg";
+import arrowRight from "../../images/icons/arrow-right.svg";
 import accountIcon from "../../images/icons/account-icon.svg";
 import burger from "../../images/icons/burger.svg";
 import close from "../../images/icons/close.svg";
@@ -83,32 +83,36 @@ export const Header: React.FC = () => {
               Добрі справи
             </Link>
             <div>
-              <p>Категорії:</p>
+              <p className="menu__categories-title">Пошук по категоріям</p>
               <ul className="menu__categories">
                 {categories.map((str) => (
-                  <li className="menu__categories__items">
-                    <p>{str}</p>
+                  <li>
+                    <Button
+                      className="secondary-button menu__categories__item"
+                      role="link"
+                    >
+                      <p>{str}</p>
+                      <img src={arrowRight} alt="arrow left" />
+                    </Button>
                   </li>
                 ))}
               </ul>
             </div>
-            <Button className="secondary-button">
-              <img src={favIcon} alt="Account icon" />
-              Додати в обране
-            </Button>
-            <Button className="secondary-button">
-              <img src={accountIcon} alt="Account icon" />
-              Мій кабінет
-            </Button>
-            <Button
-              className="main-button"
-              role="link"
-              to="/add-lot"
-              onClick={closeBurgerMenu}
-            >
-              Додати лот
-              <img src={arrowLeftUp} alt="arrow icon" />
-            </Button>
+            <div className="header__nav">
+              <Button className="fav-icon-button" />
+              <Button className="icon-button">
+                <img src={accountIcon} alt="Account icon" />
+              </Button>
+              <Button
+                className="main-button"
+                role="link"
+                to="/add-lot"
+                onClick={closeBurgerMenu}
+              >
+                Додати лот
+                <img src={arrowLeftUp} alt="arrow icon" />
+              </Button>
+            </div>
           </div>
         </div>
       </header>
@@ -148,6 +152,7 @@ export const Header: React.FC = () => {
         type="text"
         placeholder="Я шукаю бренд, модель, товар..."
       />
+      {/* <div className="search-results"></div> */}
       <div className="header__nav">
         <Button className="fav-icon-button" />
         <Button className="icon-button">
