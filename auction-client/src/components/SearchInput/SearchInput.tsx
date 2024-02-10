@@ -5,10 +5,21 @@ import close from "../../images/icons/close.svg";
 import React, { useState } from "react";
 import classNames from "classnames";
 
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { actions as filterActions } from "../../features/filter";
+import { Status } from "../../types/Status";
 
 export const SearchInput: React.FC = () => {
-  const [query, setQuery] = useState("");
-  const [status, setStatus] = useState("all");
+  // const [query, setQuery] = useState("");
+  // const [status, setStatus] = useState("all");
+
+  const { query, status } = useAppSelector((state) => state.filter);
+  const dispatch = useAppDispatch();
+  const setQuery = (curQuery: string) =>
+    dispatch(filterActions.setQuery(curQuery));
+  const setStatus = (curStatus: Status) =>
+    dispatch(filterActions.setStatus(curStatus));
+  const removeQuery = () => dispatch(filterActions.removeQuery());
 
   return (
     <div className="input-wrapper">
@@ -41,7 +52,7 @@ export const SearchInput: React.FC = () => {
       </div>
       <button
         className={classNames("delete-query", { show: query.length })}
-        onClick={() => setQuery("")}
+        onClick={() => removeQuery()}
       >
         <img src={close} alt="close icon" />
       </button>
