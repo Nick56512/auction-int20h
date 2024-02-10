@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c1cc5e4c.css",
-    "main.js": "/static/js/main.95cbdc32.js",
+    "main.css": "/static/css/main.86adda3a.css",
+    "main.js": "/static/js/main.dc8470d9.js",
     "static/media/bill-lot.png": "/static/media/bill-lot.0c348225b412742a7426.png",
     "static/media/postcard-lot.png": "/static/media/postcard-lot.6be5e4838a351ed94345.png",
     "static/media/book-lot.png": "/static/media/book-lot.979317f4bf9cb59bb66e.png",
@@ -9,25 +9,31 @@
     "static/media/ppneuemontreal-medium.otf": "/static/media/ppneuemontreal-medium.0f34f4714f1b26e0dedc.otf",
     "static/media/ppneuemontreal-book.otf": "/static/media/ppneuemontreal-book.cd21cf351f4da50cf75d.otf",
     "static/media/KyivTypeSans-Medium.otf": "/static/media/KyivTypeSans-Medium.1e5a7d8d09ffb017d0a7.otf",
+    "static/media/red-cross-fund.png": "/static/media/red-cross-fund.0469aa94f25b14d005e5.png",
+    "static/media/caritas-fund.png": "/static/media/caritas-fund.f00c7f9e075d61d06090.png",
     "static/media/KyivTypeTitling-Bold.woff": "/static/media/KyivTypeTitling-Bold.810de8946d964c697dd2.woff",
     "static/media/KyivTypeTitling-Bold.woff2": "/static/media/KyivTypeTitling-Bold.c481d68ab2267702fdcd.woff2",
-    "static/media/prytula-fund.png": "/static/media/prytula-fund.224f02e0dbda987db8a2.png",
-    "static/media/inst-icon.svg": "/static/media/inst-icon.b305e6685c777a24606e878452c12086.svg",
+    "static/media/young-donors-fund.png": "/static/media/young-donors-fund.34e95812b7cd57a4f1ba.png",
+    "static/media/hope-shelter-fund.png": "/static/media/hope-shelter-fund.d4b066c8d265cb124c2d.png",
+    "static/media/tabletochki-fund.png": "/static/media/tabletochki-fund.459424fed6b248910b9d.png",
+    "static/media/prytula-fund.png": "/static/media/prytula-fund.7a3e8730c4013e0e7542.png",
+    "static/media/back-alive-fund.png": "/static/media/back-alive-fund.d2b611697e62821957e0.png",
     "static/media/fav-icon-hover.svg": "/static/media/fav-icon-hover.67d853be03c8b7e8c939.svg",
     "static/media/fav-icon-pressed.svg": "/static/media/fav-icon-pressed.028acbf2c1af172d43ba.svg",
     "static/media/fav-icon-def.svg": "/static/media/fav-icon-def.a75035092f488944da3e.svg",
     "static/media/account-icon.svg": "/static/media/account-icon.53cffdd79fabcf47719430442e646961.svg",
-    "static/media/email-icon.svg": "/static/media/email-icon.5ae12ce17327ea6fa78afad3394bea8c.svg",
-    "static/media/twitter-icon.svg": "/static/media/twitter-icon.67faa5f6675678de92ce478fd07b3f05.svg",
+    "static/media/close.svg": "/static/media/close.c2d89faa0b82aae23eeee9e457d76923.svg",
+    "static/media/burger.svg": "/static/media/burger.03d001a3f8f4a7c9c164234e24e4cda6.svg",
     "static/media/arrow-left-up.svg": "/static/media/arrow-left-up.431ecbae6d52329b0a039b3663d64ce9.svg",
     "static/media/search-icon.svg": "/static/media/search-icon.1ee36c6393dd194ce442.svg",
     "static/media/arrow-up.svg": "/static/media/arrow-up.c356b370f59e359ca0defd494a7dda26.svg",
+    "static/media/dropdown.svg": "/static/media/dropdown.e2d7baa4f714607546ed140c2917d9eb.svg",
     "index.html": "/index.html",
-    "main.c1cc5e4c.css.map": "/static/css/main.c1cc5e4c.css.map",
-    "main.95cbdc32.js.map": "/static/js/main.95cbdc32.js.map"
+    "main.86adda3a.css.map": "/static/css/main.86adda3a.css.map",
+    "main.dc8470d9.js.map": "/static/js/main.dc8470d9.js.map"
   },
   "entrypoints": [
-    "static/css/main.c1cc5e4c.css",
-    "static/js/main.95cbdc32.js"
+    "static/css/main.86adda3a.css",
+    "static/js/main.dc8470d9.js"
   ]
 }
