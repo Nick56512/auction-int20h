@@ -1,9 +1,9 @@
-// поміняла товщину рамки
 .button {
   height: 56px;
   width: max-content;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 24px;
   text-align: center;
   font-size: 18px;
@@ -68,8 +68,8 @@
 
 .icon-button {
   width: 56px;
-  justify-content: center;
   background-color: var(--secondary-gray);
+  flex-shrink: 0;
 
   &:hover {
     background-color: var(--gray-2);
@@ -106,5 +106,21 @@
 
   .selected::before {
     background-image: url("../../images/icons/fav-icon-pressed.svg");
+  }
+}
+
+.burger-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  flex-shrink: 0;
+
+  &:hover {
+    background-color: var(--secondary-gray);
+  }
+
+  img {
+    width: 44px;
+    height: 44px;
   }
 }
