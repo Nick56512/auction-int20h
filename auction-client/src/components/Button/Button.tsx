@@ -16,8 +16,6 @@ export const Button: React.FC<Props> = ({
   role,
   to = "",
 }) => {
-  console.log(role);
-
   if (role === "link") {
     return (
       <Link className={`${className} button`} to={to} onClick={onClick}>

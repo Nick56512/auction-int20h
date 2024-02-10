@@ -9,7 +9,7 @@ import { Footer } from "./components/Footer";
 
 export const App: React.FC = () => {
   return (
-    <div className="App">
+    <>
       <Header />
 
       <main>
@@ -24,6 +24,6 @@ export const App: React.FC = () => {
       </main>
 
       <Footer />
-    </div>
+    </>
   );
 };
