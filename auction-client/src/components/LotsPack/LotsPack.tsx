@@ -8,7 +8,6 @@ import billLotImg from "../../images/img/bill-lot.png";
 import bookLotImg from "../../images/img/book-lot.png";
 import postcardLotImg from "../../images/img/postcard-lot.png";
 
-
 interface Props {
   title: string;
   className: string;
@@ -17,9 +16,11 @@ interface Props {
 export const LotsPack: React.FC<Props> = ({ title, className }) => {
   return (
     <section>
-      <div className={className ? className : 'pack__header'}>
+      <div className={className ? className : "pack__header"}>
         <h2 className="pack__title">{title}</h2>
-        <Link to="#"><img className="pack__btn" src={arrowLeftUp} alt="" /></Link>
+        <Link to="#">
+          <img className="pack__btn" src={arrowLeftUp} alt="" />
+        </Link>
       </div>
       <div className="lots-pack">
         <Lot title="Ексклюзивний набір: Дари добро..." imageSrc={setLotImg} />

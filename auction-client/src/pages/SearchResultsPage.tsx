@@ -8,9 +8,18 @@ export const SearchResultsPage: React.FC = () => {
       <Link to="/">HomePage</Link>
       <br />
       <Link to="/lot">LotPage</Link>
-      <LotsPack title="Результати пошуку" className="pack__header__results-mode" />
-      <LotsPack title="Результати пошуку" className="pack__header__display-none" />
-      <LotsPack title="Результати пошуку" className="pack__header__display-none" />
+      <LotsPack
+        title="Результати пошуку"
+        className="pack__header__results-mode"
+      />
+      <LotsPack
+        title="Результати пошуку"
+        className="pack__header__display-none"
+      />
+      <LotsPack
+        title="Результати пошуку"
+        className="pack__header__display-none"
+      />
       {/* треба додати пагінацію */}
     </>
   );

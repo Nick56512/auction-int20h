@@ -11,7 +11,6 @@ import caritasFund from "../../images/img/caritas-fund.png";
 import hopeShelterFund from "../../images/img/hope-shelter-fund.png";
 import heroesChildrenFund from "../../images/img/heroes-children-fund.png";
 
-
 interface Props {
   title: string;
 }

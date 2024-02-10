@@ -19,7 +19,9 @@ export const Lot: React.FC<Props> = ({ title, imageSrc }) => {
         {/* <a className="lot-title" to="#">
           <h3>{title}</h3>
         </Link> */}
-        <Link className="lot-title" to="#"><h3>{title}</h3></Link>
+        <Link className="lot-title" to="#">
+          <h3>{title}</h3>
+        </Link>
         <p className="lot-price">1258,00 грн</p>
         <div className="lot-info">
           <p>32 ставки</p>

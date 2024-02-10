@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import arrowLeftUp from "../../images/icons/arrow-left-up.svg";
 import accountIcon from "../../images/icons/account-icon.svg";
 
-
 export const Header: React.FC = () => {
   return (
     <header className="header">

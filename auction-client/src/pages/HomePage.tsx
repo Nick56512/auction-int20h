@@ -7,9 +7,9 @@ import { Link } from "react-router-dom";
 export const HomePage: React.FC = () => {
   return (
     <>
-       {/* посилання щоб перейти*/}
+      {/* посилання щоб перейти*/}
       <Link to="/search">Search Results Page</Link>
-      <br /> 
+      <br />
       <Link to="/lot">Lot Page</Link>
       <Hero />
       <LotsPack title="Активні лоти" className="" />

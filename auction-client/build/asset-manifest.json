@@ -26,8 +26,5 @@
     "main.6122ef25.css.map": "/auction-int20h/auction-client/static/css/main.6122ef25.css.map",
     "main.99eb23d8.js.map": "/auction-int20h/auction-client/static/js/main.99eb23d8.js.map"
   },
-  "entrypoints": [
-    "static/css/main.6122ef25.css",
-    "static/js/main.99eb23d8.js"
-  ]
+  "entrypoints": ["static/css/main.6122ef25.css", "static/js/main.99eb23d8.js"]
 }
