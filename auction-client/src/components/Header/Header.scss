@@ -1,5 +1,4 @@
 @use "../../styles/utils/placeholders";
-@import "../../styles/utils/mixins";
 
 .header {
   position: sticky;
@@ -27,6 +26,10 @@
   transform: translateX(100%);
   background-color: var(--secondary-light-blue);
 
+  @supports (background: linear-gradient(to bottom left, #b7cbdf, #8385cd)) {
+    background: linear-gradient(to bottom left, #b7cbdf, #8385cd);
+  }
+
   &.open {
     transform: translateX(0);
   }
@@ -37,6 +40,9 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  @extend %secondary-text-medium;
+  max-height: 100vh;
+  overflow: auto;
 }
 
 .burger-close-btn {
@@ -55,6 +61,7 @@
   display: flex;
   align-items: center;
   transition: all 0.3s ease-in-out;
+  flex-shrink: 0;
 
   &:hover {
     color: var(--blue-hovered);
@@ -122,6 +129,22 @@
     .dropdown__icon {
       transform: rotate(180deg);
     }
+  }
+}
+
+.menu__categories {
+  display: flex;
+  flex-direction: column;
+  @extend %secondary-text-medium;
+  gap: 12px;
+  padding: 10px 0 0 12px;
+
+  &__items {
+    min-width: 150px;
+    width: max-content;
+    border-radius: 24px;
+    padding: 12px 16px;
+    background-color: var(--secondary-light-blue);
   }
 }
 
