@@ -287,7 +287,7 @@
 
   @include onSmallDesktop() {
     border-radius: 24px;
-    max-height: 570px;
+    max-height: 440px;
   }
 
   .main-button {
@@ -295,4 +295,10 @@
     text-align: center;
     justify-content: center;
   }
+}
+
+.outbid__close-btn {
+  position: absolute;
+  top: 16px;
+  right: calc(var(--scrollbar-width) + 16px);
 }

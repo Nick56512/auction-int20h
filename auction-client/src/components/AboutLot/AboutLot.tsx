@@ -15,6 +15,7 @@ import authorPhoto from "../../images/img/author-photo.png";
 import { useState } from "react";
 import { Lot } from "src/types/Lot";
 import { User } from "src/types/User";
+import { Outbid } from "./Outbid";
 
 interface Props {
   lot: Lot | null;
@@ -24,6 +25,7 @@ interface Props {
 export const AboutLot: React.FC<Props> = ({ lot, user }) => {
   const defaultBtnText = "Поділитися";
   const [btnText, setBtnText] = useState(defaultBtnText);
+  const [openOutbid, setOpenOutbid] = useState(false);
 
   function changeBtnText(text: string) {
     setBtnText(text);
@@ -37,6 +39,15 @@ export const AboutLot: React.FC<Props> = ({ lot, user }) => {
       .writeText(window.location.href)
       .then(() => changeBtnText("Скопійовано"))
       .catch((e) => console.error(e));
+  }
+
+  function openOutbidFn() {
+    setOpenOutbid(true);
+    document.body.classList.add("no-overflow");
+  }
+  function closeOutbidFn() {
+    setOpenOutbid(false);
+    document.body.classList.remove("no-overflow");
   }
 
   const bids =
@@ -129,9 +140,9 @@ export const AboutLot: React.FC<Props> = ({ lot, user }) => {
                     <td>{bid.createdDate.toLocaleString()}</td>
                     <td>
                       {i === 0 && (
-                        <Button className="main-button">
+                        <Button className="main-button" onClick={openOutbidFn}>
                           Перебити
-                          <img src={hammer} alt="" />
+                          <img src={hammer} alt="hammer icon" />
                         </Button>
                       )}
                     </td>
@@ -149,6 +160,8 @@ export const AboutLot: React.FC<Props> = ({ lot, user }) => {
               </tbody>
             </table>
           </div>
+
+          <Outbid openOutbid={openOutbid} closeOutbidFn={closeOutbidFn} />
         </div>
       </>
     );

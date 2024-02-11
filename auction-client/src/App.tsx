@@ -7,15 +7,13 @@ import { SearchResultsPage } from "./pages/SearchResultsPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { Footer } from "./components/Footer";
 
-import { useAppDispatch, useAppSelector } from "./app/hooks";
+import { useAppDispatch } from "./app/hooks";
 import { getLots } from "./api";
 import { Lot } from "./types/Lot";
 import { actions as lotsActions } from "./features/lots";
-import { useEffect, useState } from "react";
-import { lots } from "./utils/mockData";
+import { useEffect } from "react";
 
 export const App: React.FC = () => {
-  // const currentLot = useAppSelector(state => state.currentLot);
   const dispatch = useAppDispatch();
   const setLots = (lots: Lot[]) => dispatch(lotsActions.setLots(lots));
 
