@@ -1,6 +1,18 @@
-# auction-int20h
+# CodeCupcakes
+Даний репозиторій зберігає програмний код веб-додатку для тестового завдання хакатону INT20H 2024.
+# Наш додаток доступний за посиланням: https://auction-client.netlify.app/
 
-Website for charity auction
+Наша команда розробила додаток за допомогою таких технологій та мов програмування:
+- backend частина: MongoDB, Node.js, Express, TypeScript
+- design частина: https://www.figma.com/file/3kJ7ZxdAgQuQiR497BgxTA/Auction-Web-%2F-INT20H?type=design&node-id=0-1&mode=design&t=RxxR2fC3gNdP1rzF-0
+- frontend частина: TS, HTML, CSS, React, Redux. Хостинг на Netlify
 
-- Frontend: [DEMO LINK](https://auction-client.netlify.app/)
-- Design: [Link](https://www.figma.com/file/3kJ7ZxdAgQuQiR497BgxTA/Auction-Web-%2F-INT20H?type=design&node-id=0-1&mode=design&t=RxxR2fC3gNdP1rzF-0)
+Було виконано основні вимоги для даного додатку та частково додаткові.
+
+Для тестування додатку скористуйтеся даними для входу: 
+Логін: Deer
+Пароль: Oshjfk78
+
+Оскільки деякий функціонал все ж не було додано, то аби найкраще оцінити додаток краще скористуватися цим акаунтом.
+
+Сподіваємось вам сподобається наш застосунок і ми пройдемо далі)))
