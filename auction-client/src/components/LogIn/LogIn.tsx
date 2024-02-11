@@ -20,14 +20,14 @@ export const LogIn: React.FC<Props> = ({ openLogin, closeLoginFn }) => {
         </Button>
         <form className="login__form">
           <label className="input-label">
-            Електронна пошта*
+            Логін*
             <input
-              type="email"
+              type="text"
               className="input"
-              name="email"
+              name="login"
               required
-              placeholder="name@email.com"
-              autoComplete="username"
+              placeholder="Введіть логін"
+              autoComplete="login"
             />
           </label>
           <label className="input-label">

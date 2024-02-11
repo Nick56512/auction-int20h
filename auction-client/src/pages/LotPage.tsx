@@ -148,7 +148,7 @@ export const LotPage: React.FC = () => {
         </div>
       </div>
 
-      <LotsPack title="Вас можуть зацікавити " className="" />
+      <LotsPack title="Вас можуть зацікавити " />
     </>
   );
 };

@@ -10,10 +10,13 @@ import postcardLotImg from "../../images/img/postcard-lot.png";
 
 interface Props {
   title: string;
-  className: string;
+  className?: string;
 }
 
 export const LotsPack: React.FC<Props> = ({ title, className }) => {
+
+  // filtered lots
+
   return (
     <section>
       <div className={className ? className : "pack__header"}>
@@ -36,7 +39,7 @@ export const LotsPack: React.FC<Props> = ({ title, className }) => {
           imageSrc={bookLotImg}
         />
         <Lot
-          title="Листівки любові для допомоги дітям з Маріуполя  "
+          title="Листівки любові для допомоги дітям з Маріуполя"
           imageSrc={postcardLotImg}
         />
       </div>
