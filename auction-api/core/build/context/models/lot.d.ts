@@ -4,7 +4,9 @@ export declare class Lot {
     _id?: Types.ObjectId;
     title: string;
     startPrice: number;
-    description: number;
+    createdDate: Date;
+    endDate: Date;
+    description: string;
     categoryName: string;
     currencyName: string;
     currencyCode: string;

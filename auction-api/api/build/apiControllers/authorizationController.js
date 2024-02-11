@@ -47,7 +47,10 @@ let LoginController = exports.LoginController = class LoginController {
                 };
                 const secret = configuration_1.config.tokenSecret;
                 const token = jsonwebtoken_1.default.sign(userPayload, secret, signOptions);
-                response.send({ token });
+                response.send({
+                    token: token,
+                    userId: account._id
+                });
             }
             catch (err) {
                 next(err);

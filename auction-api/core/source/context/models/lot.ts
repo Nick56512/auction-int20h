@@ -7,7 +7,7 @@ export class Lot {
     startPrice!: number
     createdDate!: Date;
     endDate!: Date;
-    description!: number
+    description!: string
     categoryName!: string
     currencyName!: string
     currencyCode!: string

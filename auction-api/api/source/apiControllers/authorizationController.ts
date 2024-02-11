@@ -25,7 +25,10 @@ export class LoginController {
           };
           const secret = config.tokenSecret;
           const token = jwt.sign(userPayload, secret, signOptions);
-          response.send({ token });
+          response.send({
+            token: token,
+            userId: account._id
+          });
         } catch (err) {
           next(err);
         }
