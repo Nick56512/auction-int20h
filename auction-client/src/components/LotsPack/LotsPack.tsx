@@ -14,7 +14,6 @@ interface Props {
 }
 
 export const LotsPack: React.FC<Props> = ({ title, className }) => {
-
   // filtered lots
 
   return (
