@@ -2,13 +2,38 @@ import { Link } from "react-router-dom";
 import "./SearchInput.scss";
 import arrowRight from "../../images/icons/arrow-right.svg";
 import close from "../../images/icons/close.svg";
-import React, { useState } from "react";
-import classNames from "classnames";
+import React, { useMemo, useState } from "react";
 
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { actions as filterActions } from "../../features/filter";
 
 export const SearchInput: React.FC = () => {
-  const [query, setQuery] = useState("");
-  const [status, setStatus] = useState("all");
+  const { query, category } = useAppSelector((state) => state.filter);
+  const dispatch = useAppDispatch();
+  const setQuery = (curQuery: string) =>
+    dispatch(filterActions.setQuery(curQuery));
+
+  const removeQuery = () => dispatch(filterActions.removeQuery());
+
+  const [open, setOpen] = useState(false);
+  const todos = useAppSelector((state) => state.todos);
+
+  const filteredTodos = useMemo(() => {
+    return todos.filter((todo) => {
+      const includesQuery = todo.title
+        .toLocaleLowerCase()
+        .includes(query.toLocaleLowerCase());
+
+      switch (category) {
+        case "Усі категорії":
+        default:
+          return includesQuery;
+
+        // default:
+        //   return todo.category === category && includesQuery;
+      }
+    });
+  }, [category, query, todos]);
 
   return (
     <div className="input-wrapper">
@@ -17,34 +42,65 @@ export const SearchInput: React.FC = () => {
         type="text"
         placeholder="Я шукаю бренд, модель, товар..."
         value={query}
-        onChange={(event) => setQuery(event.target.value)}
+        onChange={(event) => {
+          setQuery(event.target.value);
+          setOpen(true);
+        }}
       />
-      <div
-        className={classNames("search-results-wrapper", { open: query.length })}
-      >
-        <ul className="search-results">
-          <li className="search-result">
-            <Link to="#">Листівка благодійна Три ведмеді</Link>
-          </li>
-          <li className="search-result">
-            <Link to="#" className="link-to-search-result">
-              Листівка благодійна Три ведмеді
-            </Link>
-          </li>
-          <li className="search-result">
-            <Link to="#" className="link-to-search-result">
-              Дивитися всі результати
-              <img src={arrowRight} alt="arrow right icon" />
-            </Link>
-          </li>
-        </ul>
-      </div>
-      <button
-        className={classNames("delete-query", { show: query.length })}
-        onClick={() => setQuery("")}
-      >
-        <img src={close} alt="close icon" />
-      </button>
+      {query.length > 0 && open ? (
+        <>
+          <div className="search-results-wrapper">
+            <ul className="search-results">
+              {!filteredTodos.length ? (
+                <li className="search-result">
+                  Не знайдено жодного лоту, що відповідає заданим критеріям
+                </li>
+              ) : (
+                <>
+                  {filteredTodos.slice(0, 4).map((todo) => (
+                    <li className="search-result" key={todo.id}>
+                      <Link
+                        to={`/lots/${todo.id}`}
+                        onClick={() => {
+                          removeQuery();
+                          setOpen(false);
+                        }}
+                      >
+                        {todo.title}
+                      </Link>
+                    </li>
+                  ))}
+                  <li className="search-result">
+                    <Link
+                      to="/search"
+                      className="link-to-search-result"
+                      onClick={() => setOpen(false)}
+                    >
+                      Дивитися всі результати
+                      <img src={arrowRight} alt="arrow right icon" />
+                    </Link>
+                  </li>
+                </>
+              )}
+            </ul>
+          </div>
+        </>
+      ) : (
+        ""
+      )}
+      {query.length > 0 ? (
+        <button
+          className="delete-query"
+          onClick={() => {
+            setOpen(false);
+            removeQuery();
+          }}
+        >
+          <img src={close} alt="close icon" />
+        </button>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

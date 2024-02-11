@@ -4,11 +4,18 @@ import { useRef, useState } from "react";
 import { useOnClickOutside } from "usehooks-ts";
 import dropdown from "../../images/icons/dropdown.svg";
 import { categories } from "src/utils/mockData";
+import { Category } from "src/types/Category";
+import { actions as filterActions } from "../../features/filter";
+import { useAppDispatch, useAppSelector } from "src/app/hooks";
 
 export const HeaderDropdown: React.FC = () => {
   const [openDropdown, setOpenDropdown] = useState(false);
-  const [selected, setSelected] = useState("");
   const ref = useRef(null);
+
+  const { category } = useAppSelector((state) => state.filter);
+  const dispatch = useAppDispatch();
+  const setCategory = (curCategory: Category) =>
+    dispatch(filterActions.setCategory(curCategory));
 
   const handleClickOutside = () => {
     setOpenDropdown(false);
@@ -21,7 +28,7 @@ export const HeaderDropdown: React.FC = () => {
         className="dropdown__main-option"
         onClick={() => setOpenDropdown(!openDropdown)}
       >
-        <p>{selected || "Усі категорії"}</p>
+        <p>{category || "Усі категорії"}</p>
         <img className="dropdown__icon" src={dropdown} alt="dropdown icon" />
       </div>
 
@@ -32,15 +39,28 @@ export const HeaderDropdown: React.FC = () => {
               className="dropdown__menu__item"
               onClick={() => {
                 setOpenDropdown(false);
-                setSelected(str);
+                setCategory(str);
               }}
               role="link"
-              to="#"
+              to="/search"
             >
               <p>{str}</p>
             </Button>
           </li>
         ))}
+        <li>
+          <Button
+            className="dropdown__menu__item"
+            onClick={() => {
+              setOpenDropdown(false);
+              setCategory("Усі категорії");
+            }}
+            role="link"
+            to="/search"
+          >
+            <p>Усі категорії</p>
+          </Button>
+        </li>
       </ul>
     </div>
   );
