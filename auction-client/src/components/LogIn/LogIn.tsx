@@ -27,6 +27,7 @@ export const LogIn: React.FC<Props> = ({ openLogin, closeLoginFn }) => {
               name="email"
               required
               placeholder="name@email.com"
+              autoComplete="username"
             />
           </label>
           <label className="input-label">
@@ -37,6 +38,7 @@ export const LogIn: React.FC<Props> = ({ openLogin, closeLoginFn }) => {
               name="password"
               required
               placeholder="********"
+              autoComplete="current-password"
             />
           </label>
           <Button type="submit" className="main-button">

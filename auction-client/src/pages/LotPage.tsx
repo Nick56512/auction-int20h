@@ -14,9 +14,26 @@ import billLot from "../images/img/bill-lot-big.png";
 import billLot1 from "../images/img/bill-lot-small1.png";
 import billLot2 from "../images/img/bill-lot-small2.png";
 import authorPhoto from "../images/img/author-photo.png";
+import { useState } from "react";
 
 export const LotPage: React.FC = () => {
   const { lotId } = useParams();
+  const defaultBtnText = "Поділитися";
+  const [btnText, setBtnText] = useState(defaultBtnText);
+
+  function changeBtnText(text: string) {
+    setBtnText(text);
+    setTimeout(() => {
+      setBtnText(defaultBtnText);
+    }, 5000);
+  }
+
+  async function copyContent() {
+    navigator.clipboard
+      .writeText(window.location.href)
+      .then(() => changeBtnText("Скопійовано"))
+      .catch((e) => console.error(e));
+  }
 
   return (
     <>
@@ -37,8 +54,8 @@ export const LotPage: React.FC = () => {
           </p>
         </div>
         <div className="lot-page__buttons">
-          <Button className="secondary-button">
-            Поділитися
+          <Button className="secondary-button" onClick={copyContent}>
+            {btnText}
             <img src={shareIcon} alt="Share" />
           </Button>
           <Button className="secondary-button">
@@ -97,32 +114,36 @@ export const LotPage: React.FC = () => {
 
         <div className="bids__table-overflow">
           <table className="bids__table">
-            <tr>
-              <th>№</th>
-              <th>Користувач</th>
-              <th>Ставка</th>
-              <th>Дата</th>
-              <th></th>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>@tarastaras</td>
-              <td>150,00</td>
-              <td>06.02.2024 12:05</td>
-              <td>
-                <Button className="main-button">
-                  Перебити
-                  <img src={hammer} alt="" />
-                </Button>
-              </td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>@tarastaras</td>
-              <td>150,00</td>
-              <td>06.02.2024 12:05</td>
-              <td></td>
-            </tr>
+            <thead>
+              <tr>
+                <th>№</th>
+                <th>Користувач</th>
+                <th>Ставка</th>
+                <th>Дата</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>7</td>
+                <td>@tarastaras</td>
+                <td>150,00</td>
+                <td>06.02.2024 12:05</td>
+                <td>
+                  <Button className="main-button">
+                    Перебити
+                    <img src={hammer} alt="" />
+                  </Button>
+                </td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>@tarastaras</td>
+                <td>150,00</td>
+                <td>06.02.2024 12:05</td>
+                <td></td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>
