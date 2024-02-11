@@ -39,8 +39,7 @@
   transition: all 0.3s ease-in-out;
 
   &::placeholder {
-    color: var(--gray-6);
-    font-weight: 400;
+    padding: 16px 0;
   }
 
   &:focus,
@@ -54,6 +53,29 @@
     height: 56px;
     margin: 16px 0 24px;
     font-size: 16px;
+  }
+}
+
+.textarea-name {
+  height: 144px;
+  resize: vertical;
+  outline: none;
+  margin: 8px 0 16px;
+  padding-left: 16px;
+  border-radius: 28px;
+  color: var(--gray-5);
+  @extend %secondary-text-book;
+  border: 2px solid transparent;
+  background-color: var(--white);
+  transition: all 0.3s ease-in-out;
+
+  &::placeholder {
+    padding: 16px 0;
+  }
+
+  @include onDesktop {
+    height: 302px;
+    font-size: 24px;
   }
 }
 
