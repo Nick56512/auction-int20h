@@ -12,15 +12,14 @@ import { getLots } from "./api";
 import { Lot } from "./types/Lot";
 import { actions as lotsActions } from "./features/lots";
 import { useEffect } from "react";
+import { lots } from "./utils/mockData";
 
 export const App: React.FC = () => {
   const dispatch = useAppDispatch();
   const setLots = (lots: Lot[]) => dispatch(lotsActions.setLots(lots));
 
   useEffect(() => {
-    void getLots().then((data) => {
-      setLots(data ?? []);
-    });
+    setLots(lots);
   });
 
   return (

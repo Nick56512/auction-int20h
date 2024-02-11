@@ -15,14 +15,10 @@ export const LotPage: React.FC = () => {
   const [lot, setLot] = useState<Lot | null>(null);
 
   useEffect(() => {
-    void getLotById(lotId ?? "")
-      .then((data) => {
-        setLoading(true);
-        setLot(data ?? null);
-      })
-      .catch((e) => console.error(e))
-      .finally(() => setLoading(false));
-  }, [lotId]);
+    const currrentLot = lots.find(lot => lot._id === lotId);
+    setLot(currrentLot ?? null);
+
+  }, [lots, lotId]);
 
   const userWithLot = users.find((user) => user.id === lot?.creatorId) ?? null;
 
