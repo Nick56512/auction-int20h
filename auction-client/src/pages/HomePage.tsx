@@ -10,7 +10,7 @@ export const HomePage: React.FC = () => {
       {/* посилання щоб перейти*/}
       <Link to="/search">Search Results Page</Link>
       <br />
-      <Link to="/lot">Lot Page</Link>
+      <Link to="/lots/:lotId">Lot Page</Link>
       <Hero />
       <LotsPack title="Активні лоти" className="" />
       <LotsPack title="Популярні лоти" className="" />
