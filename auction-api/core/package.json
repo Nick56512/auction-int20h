@@ -17,7 +17,6 @@
     "inversify": "^6.0.1",
     "chai": "^4.4.1",
     "mongodb": "^5.7.0",
-    "mongoose": "^7.4.0",
     "reflect-metadata": "^0.1.13",
     "typescript": "^5.1.6"
   },
@@ -25,6 +24,7 @@
     "build"
   ],
   "devDependencies": {
+    "mongoose": "^7.4.0",
     "@types/chai": "^4.3.5",
     "@types/mocha": "^10.0.1",
     "express": "^4.18.2",
