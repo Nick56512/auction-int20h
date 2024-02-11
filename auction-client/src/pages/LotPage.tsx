@@ -9,6 +9,7 @@ import shareIcon from "../images/icons/share-icon.svg";
 import favIcon from "../images/icons/fav-icon.svg";
 import calendarIcon from "../images/icons/calendar-icon.svg";
 import fundIcon from "../images/icons/fund-icon.svg";
+import hammer from "../images/icons/hammer.svg";
 import billLot from "../images/img/bill-lot-big.png";
 import billLot1 from "../images/img/bill-lot-small1.png";
 import billLot2 from "../images/img/bill-lot-small2.png";
@@ -88,6 +89,41 @@ export const LotPage: React.FC = () => {
               Більше
             </Link>
           </p>
+        </div>
+      </div>
+
+      <div className="lot-page__bids">
+        <h4>Ставки</h4>
+
+        <div className="bids__table-overflow">
+          <table className="bids__table">
+            <tr>
+              <th>№</th>
+              <th>Користувач</th>
+              <th>Ставка</th>
+              <th>Дата</th>
+              <th></th>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>@tarastaras</td>
+              <td>150,00</td>
+              <td>06.02.2024 12:05</td>
+              <td>
+                <Button className="main-button">
+                  Перебити
+                  <img src={hammer} alt="" />
+                </Button>
+              </td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>@tarastaras</td>
+              <td>150,00</td>
+              <td>06.02.2024 12:05</td>
+              <td></td>
+            </tr>
+          </table>
         </div>
       </div>
 

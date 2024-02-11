@@ -182,3 +182,52 @@
     font-size: 24px;
   }
 }
+
+.lot-page__bids {
+  margin: 100px 40px 0;
+}
+
+.bids__table-overflow {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+}
+
+.bids__table {
+  width: 100%;
+  border-spacing: 0;
+  text-align: center;
+  @extend %primary-text-book;
+
+  th {
+    font-weight: 500;
+  }
+  td:last-child {
+    padding: 12px 0;
+  }
+  .main-button {
+    margin: 0 auto;
+  }
+
+  th,
+  td {
+    height: 80px;
+    padding: 20px 24px;
+
+    &:nth-child(1) {
+      min-width: 90px;
+    }
+    &:nth-child(2) {
+      min-width: 200px;
+    }
+    &:nth-child(3) {
+      min-width: 150px;
+    }
+    &:nth-child(4) {
+      min-width: 250px;
+    }
+    &:nth-child(5) {
+      min-width: max-content;
+    }
+  }
+}
