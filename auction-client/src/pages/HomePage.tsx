@@ -11,6 +11,8 @@ export const HomePage: React.FC = () => {
       <Link to="/search">Search Results Page</Link>
       <br />
       <Link to="/lots/:lotId">Lot Page</Link>
+      <br />
+      <Link to="/add-lot">Add Lot</Link>
       <Hero />
       <LotsPack title="Активні лоти" className="" />
       <LotsPack title="Популярні лоти" className="" />
