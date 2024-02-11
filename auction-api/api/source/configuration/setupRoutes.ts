@@ -10,5 +10,5 @@ export function setupRoutes(app: Express, container: Container) {
     //app.use('/accounts', authenticateToken,  getAccountMetaGraphControllerRouter(container));
     app.use('/user', getAuthorizationRoutes(container))
     app.use('/accounts', getAccountsRoutes(container))
-    app.use('/lots', authenticateToken, getLotsRoutes(container))
+    app.use('/lots', getLotsRoutes(container))
 }
