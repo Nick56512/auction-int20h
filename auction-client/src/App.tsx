@@ -8,7 +8,7 @@ import { NotFoundPage } from "./pages/NotFoundPage";
 import { Footer } from "./components/Footer";
 
 import { useAppDispatch, useAppSelector } from "./app/hooks";
-// import { getLots } from "./api";
+import { getLots } from "./api";
 import { Lot } from "./types/Lot";
 import { actions as lotsActions } from "./features/lots";
 import { useEffect, useState } from "react";
@@ -20,10 +20,9 @@ export const App: React.FC = () => {
   const setLots = (lots: Lot[]) => dispatch(lotsActions.setLots(lots));
 
   useEffect(() => {
-    // void getLots().then((data) => {
-    //   setLots(data ?? []);
-    // });
-    setLots(lots);
+    void getLots().then((data) => {
+      setLots(data ?? []);
+    });
   });
 
   return (

@@ -36,7 +36,7 @@ export const SearchResults: React.FC = () => {
       ) : (
         <div className="lots-pack">
           {filteredLots.map((lot) => (
-            <LotItem key={lot.id} lot={lot} />
+            <LotItem key={lot._id} lot={lot} />
           ))}
         </div>
       )}

@@ -40,11 +40,9 @@ export const AboutLot: React.FC<Props> = ({ lot, user }) => {
   }
 
   const bids =
-    (lot?.bids &&
-      lot?.bids.sort(
-        (bid1, bid2) => bid2.createdDate.getTime() - bid1.createdDate.getTime(),
-      )) ??
-    [];
+    lot?.bids.sort(
+      (bid1, bid2) => bid2.createdDate.getTime() - bid1.createdDate.getTime(),
+    ) ?? [];
 
   if (lot) {
     return (

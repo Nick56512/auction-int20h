@@ -1,7 +1,7 @@
 import { Bid } from "./Bid";
 
 export interface Lot {
-  id: string;
+  _id: string;
   title: string;
   startPrice: number;
   createdDate: Date;
@@ -11,5 +11,5 @@ export interface Lot {
   currencyName: string;
   currencyCode: string;
   creatorId: string;
-  bids?: Bid[];
+  bids: Bid[];
 }

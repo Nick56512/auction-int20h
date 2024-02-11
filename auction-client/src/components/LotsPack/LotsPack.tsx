@@ -22,7 +22,7 @@ export const LotsPack: React.FC<Props> = ({ title }) => {
       </div>
       <div className="lots-pack">
         {lots.slice(0, 4).map((lot) => (
-          <LotItem key={lot.id} lot={lot} />
+          <LotItem key={lot._id} lot={lot} />
         ))}
       </div>
     </section>

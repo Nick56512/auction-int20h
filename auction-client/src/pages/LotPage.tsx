@@ -6,16 +6,23 @@ import { AboutLot } from "src/components/AboutLot";
 import { Lot } from "src/types/Lot";
 import { useAppSelector } from "src/app/hooks";
 import { users } from "src/utils/mockData";
+import { getLotById } from "src/api";
 
 export const LotPage: React.FC = () => {
   const lots = useAppSelector((state) => state.lots);
   const { lotId } = useParams();
+  const [loading, setLoading] = useState(false);
   const [lot, setLot] = useState<Lot | null>(null);
 
   useEffect(() => {
-    const searchedLot = lots.find((item) => item.id === lotId) ?? null;
-    setLot(searchedLot);
-  }, [lots, lotId]);
+    void getLotById(lotId ?? "")
+      .then((data) => {
+        setLoading(true);
+        setLot(data ?? null);
+      })
+      .catch((e) => console.error(e))
+      .finally(() => setLoading(false));
+  }, [lotId]);
 
   const userWithLot = users.find((user) => user.id === lot?.creatorId) ?? null;
 
@@ -25,8 +32,14 @@ export const LotPage: React.FC = () => {
 
   return (
     <>
-      <BreadCrumb name={lot?.title ?? ""} />
-      <AboutLot lot={lot} user={userWithLot} />
+      {loading ? (
+        <h2>Loading...</h2>
+      ) : (
+        <>
+          <BreadCrumb name={lot?.title ?? ""} />
+          <AboutLot lot={lot} user={userWithLot} />
+        </>
+      )}
       <LotsPack title="Вас можуть зацікавити" />
     </>
   );

@@ -57,9 +57,9 @@ export const SearchInput: React.FC = () => {
               ) : (
                 <>
                   {filteredLots.slice(0, 4).map((lot) => (
-                    <li className="search-result" key={lot.id}>
+                    <li className="search-result" key={lot._id}>
                       <Link
-                        to={`/lots/${lot.id}`}
+                        to={`/lots/${lot._id}`}
                         onClick={() => {
                           removeQuery();
                           setOpen(false);

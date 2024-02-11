@@ -24,7 +24,7 @@ export const currencies: string[] = ["USD", "UAH", "ZLT", "EUR"];
 
 export const lots: Lot[] = [
   {
-    id: "1",
+    _id: "1",
     title: "Ексклюзивний набір: Дари доброти та надії",
     startPrice: 20,
     createdDate: new Date(2022, 11, 6),
@@ -54,7 +54,7 @@ export const lots: Lot[] = [
     ],
   },
   {
-    id: "2",
+    _id: "2",
     title: "Літературна скарбниця: Книжки для добрих справ",
     startPrice: 20,
     createdDate: new Date(2023, 4, 5),
@@ -84,7 +84,7 @@ export const lots: Lot[] = [
     ],
   },
   {
-    id: "3",
+    _id: "3",
     title: "Пам'ятна банкнота 'Пам'ятаємо! Не пробачимо!'",
     startPrice: 20,
     createdDate: new Date(2023, 10, 4),
@@ -146,7 +146,7 @@ export const lots: Lot[] = [
     ],
   },
   {
-    id: "4",
+    _id: "4",
     title: "Листівки любові для допомоги дітям з Маріуполя",
     startPrice: 10,
     createdDate: new Date(2023, 10, 4),

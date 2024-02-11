@@ -20,7 +20,7 @@ export const LotItem: React.FC<Props> = ({ lot }) => {
         <Button className="fav-icon-button lot__galery-fav-icon"></Button>
       </div>
       <div className="lot__description">
-        <Link className="lot-title" to={`/lots/${lot.id}`}>
+        <Link className="lot-title" to={`/lots/${lot._id}`}>
           <h3>{lot.title}</h3>
         </Link>
         <p className="lot-price">
@@ -33,10 +33,10 @@ export const LotItem: React.FC<Props> = ({ lot }) => {
         </div>
         <div className="lot-info">
           <p>
-            {lot.bids?.length ?? 0}{" "}
-            {lot.bids?.length === 0
+            {lot.bids.length ?? 0}{" "}
+            {lot.bids.length === 0
               ? "ставок"
-              : lot.bids?.length === 1
+              : lot.bids.length === 1
                 ? "ставка"
                 : "ставки"}
           </p>
