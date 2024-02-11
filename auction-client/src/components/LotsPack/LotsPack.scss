@@ -4,12 +4,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 80px 40px 48px;
+  margin: 80px 16px 48px;
   padding: 24px 0;
   border-bottom: 1px solid var(--gray-3);
 
   @include onDesktop {
-    margin-top: 136px;
+    margin: 136px 40px 48px;
     padding: 32px 0;
   }
 }
@@ -42,7 +42,6 @@
   @include onTablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 24px 40px 40px;
   }
 
   @include onDesktop {
