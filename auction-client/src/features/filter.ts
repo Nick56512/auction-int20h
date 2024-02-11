@@ -1,7 +1,7 @@
-import { Status } from "../types/Status";
+import { Category } from "../types/Category";
 
 type SetQueryAction = { type: "filter/SET_QUERY"; payload: string };
-type SetStatusAction = { type: "filter/SET_STATUS"; payload: Status };
+type SetCategoryAction = { type: "filter/SET_STATUS"; payload: Category };
 type RemoveQueryAction = { type: "filter/REMOVE_QUERY" };
 
 const setQuery = (query: string): SetQueryAction => ({
@@ -9,25 +9,25 @@ const setQuery = (query: string): SetQueryAction => ({
   payload: query,
 });
 
-const setStatus = (status: Status): SetStatusAction => ({
+const setCategory = (category: Category): SetCategoryAction => ({
   type: "filter/SET_STATUS",
-  payload: status,
+  payload: category,
 });
 
 const removeQuery = (): RemoveQueryAction => ({ type: "filter/REMOVE_QUERY" });
 
-export const actions = { setQuery, setStatus, removeQuery };
+export const actions = { setQuery, setCategory, removeQuery };
 
-type Action = SetQueryAction | SetStatusAction | RemoveQueryAction;
+type Action = SetQueryAction | SetCategoryAction | RemoveQueryAction;
 
 type Filter = {
   query: string;
-  status: Status;
+  category: Category;
 };
 
 const startFilterOptions: Filter = {
   query: "",
-  status: "all",
+  category: "Усі категорії",
 };
 
 const filterReducer = (state: Filter = startFilterOptions, action: Action) => {
@@ -36,7 +36,7 @@ const filterReducer = (state: Filter = startFilterOptions, action: Action) => {
       return { ...state, query: action.payload };
 
     case "filter/SET_STATUS":
-      return { ...state, status: action.payload };
+      return { ...state, category: action.payload };
 
     case "filter/REMOVE_QUERY":
       return { ...state, query: "" };

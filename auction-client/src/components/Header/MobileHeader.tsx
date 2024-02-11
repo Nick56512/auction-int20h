@@ -9,6 +9,9 @@ import burger from "../../images/icons/burger.svg";
 import close from "../../images/icons/close.svg";
 import classNames from "classnames";
 import { SearchInput } from "../SearchInput";
+import { Category } from "src/types/Category";
+import { actions as filterActions } from "../../features/filter";
+import { useAppDispatch, useAppSelector } from "src/app/hooks";
 
 export const MobileHeader: React.FC = () => {
   const [open, setOpen] = useState(false);
@@ -22,6 +25,11 @@ export const MobileHeader: React.FC = () => {
     setOpen(false);
     body.classList.remove("no-overflow");
   }
+
+  const { category } = useAppSelector((state) => state.filter);
+  const dispatch = useAppDispatch();
+  const setCategory = (curCategory: Category) =>
+    dispatch(filterActions.setCategory(curCategory));
 
   return (
     <header className="header mobile">
@@ -50,15 +58,33 @@ export const MobileHeader: React.FC = () => {
               {categories.map((str, i) => (
                 <li key={i}>
                   <Button
-                    className="secondary-button menu__categories__item"
+                    className={classNames(
+                      "secondary-button menu__categories__item",
+                      { current: category === str },
+                    )}
+                    onClick={() => setCategory(str)}
                     role="link"
-                    to="#"
+                    to="/search"
                   >
                     <p>{str}</p>
                     <img src={arrowRight} alt="arrow left" />
                   </Button>
                 </li>
               ))}
+              <li>
+                <Button
+                  className={classNames(
+                    "secondary-button menu__categories__item",
+                    { current: category === "Усі категорії" },
+                  )}
+                  onClick={() => setCategory("Усі категорії")}
+                  role="link"
+                  to="/search"
+                >
+                  <p>Усі категорії</p>
+                  <img src={arrowRight} alt="arrow left" />
+                </Button>
+              </li>
             </ul>
           </div>
           <div className="header__nav">
