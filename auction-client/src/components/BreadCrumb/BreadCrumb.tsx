@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import "./BredCrumb.scss";
+import "./BreadCrumb.scss";
 
 interface Props {
   name: string;
 }
 
-export const BredCrumb: React.FC<Props> = ({ name }) => {
+export const BreadCrumb: React.FC<Props> = ({ name }) => {
   return (
     <nav aria-label="Breadcrumb" className="breadcrumb">
       <ul>

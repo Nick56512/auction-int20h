@@ -5,7 +5,6 @@
   width: max-content;
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 24px;
   text-align: center;
   font-size: 18px;
@@ -26,7 +25,7 @@
 }
 
 .main-button {
-  padding: 0 32px;
+  padding: 0 12px;
   color: var(--white);
   border-color: var(--blue-default);
   background-color: var(--blue-default);
@@ -40,6 +39,10 @@
     border-color: var(--blue-pressed);
     background-color: var(--blue-pressed);
   }
+
+  @include onSmallDesktop() {
+    padding: 0 32px;
+  }
 }
 
 .secondary-button {
@@ -48,7 +51,6 @@
   border-color: var(--secondary-light-blue);
   color: var(--black);
   background-color: transparent;
-  mix-blend-mode: multiply;
 
   .img {
     position: absolute;
@@ -75,6 +77,7 @@
 
 .icon-button {
   width: 56px;
+  justify-content: center;
   background-color: var(--secondary-gray);
   flex-shrink: 0;
 
@@ -119,6 +122,7 @@
 .burger-btn {
   width: 56px;
   height: 56px;
+  justify-content: center;
   border-radius: 50%;
   flex-shrink: 0;
 

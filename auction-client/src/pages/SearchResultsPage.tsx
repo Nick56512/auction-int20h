@@ -1,10 +1,10 @@
-import { BredCrumb } from "src/components/BredCrumb";
+import { BreadCrumb } from "src/components/BreadCrumb";
 import { LotsPack } from "src/components/LotsPack";
 
 export const SearchResultsPage: React.FC = () => {
   return (
     <>
-      <BredCrumb name="Результати пошуку" />
+      <BreadCrumb name="Результати пошуку" />
       <LotsPack
         title="Результати пошуку"
         className="pack__header__results-mode"

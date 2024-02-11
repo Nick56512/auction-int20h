@@ -1,7 +1,7 @@
 import "./LotPage.scss";
 
 import { Link, useParams } from "react-router-dom";
-import { BredCrumb } from "src/components/BredCrumb";
+import { BreadCrumb } from "src/components/BreadCrumb";
 import { Button } from "src/components/Button";
 import { LotsPack } from "src/components/LotsPack";
 
@@ -19,7 +19,7 @@ export const LotPage: React.FC = () => {
 
   return (
     <>
-      <BredCrumb name="Пам'ятна банкнота &quot;Пам'ятаємо! Не пробачимо!&quot;" />
+      <BreadCrumb name="Пам'ятна банкнота &quot;Пам'ятаємо! Не пробачимо!&quot;" />
       <div className="lot-page__header">
         <h3 className="lot-page__header-title">
           Пам'ятна банкнота &quot;Пам'ятаємо! Не пробачимо!&quot;

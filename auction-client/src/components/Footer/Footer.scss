@@ -49,13 +49,17 @@
   display: flex;
   align-items: center;
   font-size: 20px;
-  line-height: 100%;
+  line-height: 16px;
   letter-spacing: -2px;
-  max-width: 100px;
+  max-width: 80px;
   transition: all 0.3s ease-in-out;
 
   &:hover {
     color: var(--white);
+  }
+
+  @include onTablet() {
+    max-width: 100px;
   }
 }
 
@@ -79,6 +83,7 @@
   display: flex;
   align-items: center;
   gap: 24px;
+  flex-wrap: wrap;
 }
 
 .footer__contacts-soc {
