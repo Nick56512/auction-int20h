@@ -117,7 +117,15 @@ export const AboutLot: React.FC<Props> = ({ lot, user }) => {
           </div>
         </div>
         <div className="lot-page__bids">
-          <h4>Ставки</h4>
+          <div className="lot-page__bids-title">
+            <h4>Ставки</h4>
+            {!bids.length && (
+              <Button className="main-button" onClick={openOutbidFn}>
+                Зробити ставку
+                <img src={hammer} alt="hammer icon" />
+              </Button>
+            )}
+          </div>
           <div className="bids__table-overflow">
             <table className="bids__table">
               <thead>
