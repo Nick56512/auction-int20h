@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.37a6fc00.css",
-    "main.js": "/static/js/main.b5909391.js",
+    "main.js": "/static/js/main.938565a8.js",
     "static/media/people-holding-hands.png": "/static/media/people-holding-hands.c8f4f78d573a466a3fdd.png",
     "static/media/bill-lot-big.png": "/static/media/bill-lot-big.5bba013cbb2047b3109f.png",
     "static/media/bill-lot.png": "/static/media/bill-lot.0c348225b412742a7426.png",
@@ -38,17 +38,17 @@
     "static/media/burger.svg": "/static/media/burger.03d001a3f8f4a7c9c164234e24e4cda6.svg",
     "static/media/arrow-right.svg": "/static/media/arrow-right.5fb0cc2e743fcec60ab0bd110d88b1fc.svg",
     "static/media/twitter-icon.svg": "/static/media/twitter-icon.fb69fa147aaebe7c4d0c703783d24f49.svg",
+    "index.html": "/index.html",
     "static/media/arrow-left-up.svg": "/static/media/arrow-left-up.431ecbae6d52329b0a039b3663d64ce9.svg",
     "static/media/search-icon.svg": "/static/media/search-icon.1ee36c6393dd194ce442.svg",
     "static/media/arrow-up.svg": "/static/media/arrow-up.c356b370f59e359ca0defd494a7dda26.svg",
     "static/media/dropright.svg": "/static/media/dropright.296c09fbc23c52d2b06e.svg",
     "static/media/dropdown.svg": "/static/media/dropdown.e2d7baa4f714607546ed140c2917d9eb.svg",
-    "index.html": "/index.html",
     "main.37a6fc00.css.map": "/static/css/main.37a6fc00.css.map",
-    "main.b5909391.js.map": "/static/js/main.b5909391.js.map"
+    "main.938565a8.js.map": "/static/js/main.938565a8.js.map"
   },
   "entrypoints": [
     "static/css/main.37a6fc00.css",
-    "static/js/main.b5909391.js"
+    "static/js/main.938565a8.js"
   ]
 }
