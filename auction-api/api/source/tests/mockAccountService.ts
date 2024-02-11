@@ -1,5 +1,8 @@
 import { IRepository, Account, Range } from "core";
 import { injectable } from "inversify";
+
+import { Types } from "core"; 
+import { resolve } from "path";
 import { FilterQuery, QueryOptions } from "mongoose";
 
 @injectable()
@@ -21,6 +24,13 @@ export class MockAccountRepository implements IRepository<Account> {
             resolve(this.accounts.length)
         })
     }
+    createAsync(entity: Account): Promise<Account> {
+        return new Promise((resolve) => {
+            entity._id = Types.ObjectId.createFromTime(new Date().getSeconds());
+            this.accounts.push(entity)
+            resolve(entity);
+        })
+    }
 
     updateAsync(id: string, entity: Account): Promise<any> {
         throw new Error("Method not implemented.");
@@ -28,12 +38,6 @@ export class MockAccountRepository implements IRepository<Account> {
     deleteAsync(id: string): Promise<any> {
         throw new Error("Method not implemented.");
     }
-    createAsync(entity: Account): Promise<Account> {
-        throw new Error("Method not implemented.");
-    }
-
-
-
     getByIdAsync(id: string, populatePath?: string | undefined): Promise<Account | null> {
         throw new Error("Method not implemented.");
     }

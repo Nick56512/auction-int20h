@@ -15,6 +15,7 @@ function setupServer(): Express {
 	setupMiddleware(app)
 	setupRoutes(app, iocContainer)
 	
+	
 	app.listen(port, () => console.info("Listening on port " + port + " ..."));
 	return app;
 }

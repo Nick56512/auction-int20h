@@ -4,7 +4,7 @@ import { Account, IRepository, RepositoryTypes } from "core";
 import { Container } from "inversify";
 import "reflect-metadata";
 import { ApiControllersTypes } from "./injection/IoCKeyTypes";
-
+import { AccountsController } from "@module/apiControllers/accountController";
 
 
 export function setupIoC(): Container {
@@ -20,6 +20,7 @@ function setupRepositories(container: Container) {
 
 function setupControllers(container: Container) {
 	container.bind<LoginController>(ApiControllersTypes.AuthorizationController).to(LoginController);
+	container.bind<AccountsController>(ApiControllersTypes.AccountsController).to(AccountsController);
 }
 
 
