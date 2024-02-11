@@ -7,8 +7,10 @@
   gap: 16px;
   padding: 0 40px;
 
-  @include onDesktop {
+  @include onTablet {
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     gap: 0;
   }
 }
@@ -99,5 +101,84 @@
   @include onDesktop {
     display: flex;
     flex-direction: column;
+  }
+}
+
+.lot-page__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 120px 40px 0;
+
+  @include onTablet {
+    flex-direction: row-reverse;
+    gap: 24px;
+  }
+
+  @include onDesktop {
+    margin-top: 48px;
+  }
+}
+
+.about-author__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 24px;
+  background-color: var(--secondary-gray);
+  border-radius: 24px;
+  width: 343px;
+  height: 198px;
+  font-size: 16px;
+
+  @include onDesktop {
+    padding: 40px;
+    width: 553px;
+    height: 255px;
+    font-size: 24px;
+  }
+}
+
+.author-personality {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.author-name {
+  @include onDesktop {
+    font-size: 24px;
+  }
+}
+
+.autor-login {
+  margin-top: 8px;
+  @extend %tertiary-text-book;
+  color: var(--garay-5);
+}
+
+.author-info {
+  margin-top: 8px;
+  @extend %tertiary-text-book;
+  color: var(--garay-5);
+
+  @include onDesktop {
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    margin: 16px 100px 0 0;
+    font-size: 16px;
+  }
+}
+
+.lot-page__about-lot {
+  margin-top: 24px;
+  line-height: 150%;
+
+  @include onTablet {
+    margin: 0;
+  }
+
+  @include onDesktop {
+    font-size: 24px;
   }
 }
