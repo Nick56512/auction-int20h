@@ -29,6 +29,16 @@ h3 {
   line-height: 120%;
 }
 
+h4 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 120%;
+
+  @include onDesktop() {
+    font-size: 32px;
+  }
+}
+
 .no-overflow {
   overflow: hidden;
 }

@@ -1,3 +1,5 @@
+@import "../../styles/utils/mixins";
+
 .button {
   height: 56px;
   width: max-content;
@@ -42,7 +44,7 @@
 
 .secondary-button {
   position: relative;
-  padding: 0 32px;
+  padding: 0 21px;
   border-color: var(--secondary-light-blue);
   color: var(--black);
   background-color: transparent;
@@ -64,6 +66,10 @@
   &:focus {
     border-color: var(--secondary-light-blue);
     background-color: var(--secondary-light-blue);
+  }
+
+  @include onTablet {
+    padding: 0 32px;
   }
 }
 
