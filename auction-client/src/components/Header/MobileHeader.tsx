@@ -13,7 +13,11 @@ import { Category } from "src/types/Category";
 import { actions as filterActions } from "../../features/filter";
 import { useAppDispatch, useAppSelector } from "src/app/hooks";
 
-export const MobileHeader: React.FC = () => {
+interface Props {
+  openLoginFn: () => void;
+}
+
+export const MobileHeader: React.FC<Props> = ({ openLoginFn }) => {
   const [open, setOpen] = useState(false);
 
   const body = document.body;
@@ -89,7 +93,13 @@ export const MobileHeader: React.FC = () => {
           </div>
           <div className="header__nav">
             <Button className="fav-icon-button" />
-            <Button className="icon-button">
+            <Button
+              className="icon-button"
+              onClick={() => {
+                closeBurgerMenu();
+                openLoginFn();
+              }}
+            >
               <img src={accountIcon} alt="Account icon" />
             </Button>
             <Button
