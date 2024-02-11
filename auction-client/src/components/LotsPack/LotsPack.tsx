@@ -23,15 +23,20 @@ export const LotsPack: React.FC<Props> = ({ title, className }) => {
         </Link>
       </div>
       <div className="lots-pack">
-        <Lot title="Ексклюзивний набір: Дари добро..." imageSrc={setLotImg} />
-        {/* Не знаю як поробити ці ... в кінці */}
         <Lot
-          title="Пам'ятна банкнота &quot;Пам'ятаємо! Не п..."
+          title="Ексклюзивний набір: Дари доброти та надії"
+          imageSrc={setLotImg}
+        />
+        <Lot
+          title="Пам'ятна банкнота &quot;Пам'ятаємо! Не пробачимо!&quot;"
           imageSrc={billLotImg}
         />
-        <Lot title="Літературна скарбниця: Книжк..." imageSrc={bookLotImg} />
         <Lot
-          title="Листівки любові для допомоги дітя... "
+          title="Літературна скарбниця: Книжки для добрих справ"
+          imageSrc={bookLotImg}
+        />
+        <Lot
+          title="Листівки любові для допомоги дітям з Маріуполя  "
           imageSrc={postcardLotImg}
         />
       </div>
