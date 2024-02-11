@@ -4,6 +4,9 @@ import { FilterQuery, QueryOptions } from "mongoose";
 
 @injectable()
 export class LotRepository implements IRepository<Lot> {
+
+    private lots: Lot[] = []
+
     getAllAsync(): Promise<Lot[]> {
         throw new Error("Method not implemented.");
     }
@@ -31,4 +34,15 @@ export class LotRepository implements IRepository<Lot> {
     
 
   
+
+    createData() {
+        this.lots = [
+            {   categoryName: "Мистецтво", 
+                createdDate: new Date(), 
+                title: 'Унікальне видання "Кобзар"',
+                startPrice: 6000,
+                endDate: new Date(). 
+            }
+        ]
+    }
 }
