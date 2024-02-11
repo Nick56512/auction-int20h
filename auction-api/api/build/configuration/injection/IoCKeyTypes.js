@@ -5,7 +5,7 @@ var ApiControllersTypes;
 (function (ApiControllersTypes) {
     ApiControllersTypes["AuthorizationController"] = "AuthorizationController";
     ApiControllersTypes["AccountsController"] = "AccountsController";
-    ApiControllersTypes["LotRepository"] = "LotController";
+    ApiControllersTypes["LotController"] = "LotController";
     ApiControllersTypes["BidController"] = "BidController";
 })(ApiControllersTypes || (exports.ApiControllersTypes = ApiControllersTypes = {}));
 //# sourceMappingURL=IoCKeyTypes.js.map

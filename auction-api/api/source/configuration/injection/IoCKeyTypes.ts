@@ -1,6 +1,6 @@
 export enum ApiControllersTypes {
     AuthorizationController = "AuthorizationController",
     AccountsController = "AccountsController",
-    LotRepository = "LotController",
+    LotController = "LotController",
     BidController = "BidController"
 }
