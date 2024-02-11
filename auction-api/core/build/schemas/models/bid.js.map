@@ -1,0 +1,1 @@
+{"version":3,"file":"bid.js","sourceRoot":"","sources":["../../../source/schemas/models/bid.ts"],"names":[],"mappings":";;AAAA,uCAAkC;AAGlC,MAAM,SAAS,GAAG,IAAI,iBAAM,CAAM;IAC9B,UAAU,EAAE,MAAM;IAClB,YAAY,EAAE,MAAM;IACpB,SAAS,EAAE,EAAE,IAAI,EAAE,iBAAM,CAAC,KAAK,CAAC,QAAQ,EAAE,GAAG,EAAE,SAAS,EAAE;CAC7D,CAAC,CAAA;AAEF,kBAAe,SAAS,CAAA"}
