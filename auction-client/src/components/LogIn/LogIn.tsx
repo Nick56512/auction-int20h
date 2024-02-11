@@ -31,6 +31,7 @@ export const LogIn: React.FC<Props> = ({ openLogin, closeLoginFn }) => {
 
       if (result.token.length) {
         localStorage.setItem("loginToken", result.token);
+        localStorage.setItem("userId", result.userId);
         setLogin("");
         setPassword("");
         closeLoginFn();

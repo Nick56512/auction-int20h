@@ -20,8 +20,7 @@ export const users: User[] = [
   { id: "4", login: "Beer890", password: "MiLY78", userName: "KOpRty" },
 ];
 
-// currencyNames currencyName
-// currrencyCodes EUR
+export const currencies: string[] = ["USD", "UAH", "ZLT", "EUR"];
 
 export const lots: Lot[] = [
   {

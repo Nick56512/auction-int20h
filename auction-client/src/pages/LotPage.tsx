@@ -19,6 +19,10 @@ export const LotPage: React.FC = () => {
 
   const userWithLot = users.find((user) => user.id === lot?.creatorId) ?? null;
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   return (
     <>
       <BreadCrumb name={lot?.title ?? ""} />

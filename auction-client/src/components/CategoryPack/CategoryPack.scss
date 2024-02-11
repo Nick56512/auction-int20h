@@ -1,11 +1,5 @@
 @import "../../styles/utils/mixins";
 
-.pack__nav-btn {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
 .category-pack {
   display: grid;
   justify-content: center;
@@ -25,4 +19,14 @@
     justify-self: center;
     padding: 0 40px;
   }
+}
+
+.category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+  width: 322px;
+  height: 161px;
 }

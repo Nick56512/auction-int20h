@@ -1,5 +1,5 @@
-@import "../styles/utils/mixins";
-@import "../styles/utils/placeholders";
+@import "../../styles/utils/mixins";
+@import "../../styles/utils/placeholders";
 
 .lot-description {
   display: flex;
@@ -30,7 +30,7 @@
   width: 100%;
   height: 44px;
   margin: 8px 0 16px;
-  padding-left: 16px;
+  padding: 16px;
   border-radius: 28px;
   color: var(--gray-6);
   @extend %tertiary-text-medium;
@@ -140,4 +140,8 @@
   @include onDesktop {
     margin-left: 40px;
   }
+}
+
+.dropdown-form {
+  margin: 8px 0 16px;
 }
