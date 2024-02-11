@@ -7,6 +7,7 @@ interface Props {
   onClick?: () => void;
   role?: "link" | "button";
   to?: string;
+  type?: "submit" | "button" | "reset";
 }
 
 export const Button: React.FC<Props> = ({
@@ -15,6 +16,7 @@ export const Button: React.FC<Props> = ({
   onClick,
   role,
   to = "",
+  type,
 }) => {
   if (role === "link") {
     return (
@@ -25,7 +27,7 @@ export const Button: React.FC<Props> = ({
   }
 
   return (
-    <button className={`${className} button`} onClick={onClick}>
+    <button className={`${className} button`} onClick={onClick} type={type}>
       {children}
     </button>
   );

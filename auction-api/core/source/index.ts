@@ -1,15 +1,6 @@
-import { createDbContext } from "./context/dbcontext";
-import { createAccountModel } from "./context/modelsFactory";
-import { ModelRepository } from "./repositories/modelRepository";
+export * from './context/models/index'
+export * from './repositories/iRepository'
+export * from './repositories/modelRepository'
 
-createDbContext('mongodb://0.0.0.0:27017/auction')
-    .then(x => {
-        const accountModel = createAccountModel(x)
-        const repo = new ModelRepository(accountModel)
-        repo.createAsync({
-            login: "pivko",
-            password: 'yuiop',
-            userName: 'Dancer'
-        })
-    })
-
+export * from './repositoryKeys'
+export * from './schemas/index'

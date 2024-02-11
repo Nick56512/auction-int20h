@@ -36,6 +36,11 @@
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: var(--blue-hovered);
+  }
 }
 
 .lot__description {
@@ -51,6 +56,11 @@
 
 .lot-price {
   margin-top: 8px;
+  @extend %secondary-text-medium;
+  color: var(--gray-5);
+}
+
+.lot-category  {
   @extend %secondary-text-medium;
   color: var(--gray-5);
 }

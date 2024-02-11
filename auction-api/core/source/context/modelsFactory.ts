@@ -9,7 +9,7 @@ export function createAccountModel(context: Connection, collectionName?: string)
 export function createBidModel(context: Connection, collectionName?: string) {
     return context.model("Bid", bidSchema, collectionName);
 }
-export function create(context: Connection, collectionName?: string) {
+export function createLotModel(context: Connection, collectionName?: string) {
     return context.model("Lot", lotSchema, collectionName);
 }
   

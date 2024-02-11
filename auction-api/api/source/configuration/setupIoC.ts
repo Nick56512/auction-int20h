@@ -1,5 +1,9 @@
+import { LoginController } from "@module/apiControllers/authorizationController";
+import { MockAccountRepository } from "@module/tests/mockAccountService";
+import { Account, IRepository, RepositoryTypes } from "core";
 import { Container } from "inversify";
 import "reflect-metadata";
+import { ApiControllersTypes } from "./injection/IoCKeyTypes";
 
 
 
@@ -11,11 +15,11 @@ export function setupIoC(): Container {
 }
 
 function setupRepositories(container: Container) {
-	
+	container.bind<IRepository<Account>>(RepositoryTypes.AccountRepository).to(MockAccountRepository);
 }
 
 function setupControllers(container: Container) {
-
+	container.bind<LoginController>(ApiControllersTypes.AuthorizationController).to(LoginController);
 }
 
 
