@@ -6,14 +6,14 @@ import {
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 
-import currentTodoReducer from "../features/currentTodo";
+import currentLotReducer from "../features/currentLot";
 import filterReducer from "../features/filter";
-import todosReducer from "../features/todos";
+import lotsReducer from "../features/lots";
 
 const rootReducer = combineReducers({
-  currentTodo: currentTodoReducer,
+  currentLot: currentLotReducer,
   filter: filterReducer,
-  todos: todosReducer,
+  lots: lotsReducer,
 });
 
 // The `store` is passed to the Provider in `/src/index.tsx`

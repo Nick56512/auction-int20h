@@ -8,23 +8,22 @@ import { NotFoundPage } from "./pages/NotFoundPage";
 import { Footer } from "./components/Footer";
 
 import { useAppDispatch, useAppSelector } from "./app/hooks";
-import { getTodos } from "./api";
-import { Todo } from "./types/Todo";
-import { actions as todosActions } from "./features/todos";
+// import { getLots } from "./api";
+import { Lot } from "./types/Lot";
+import { actions as lotsActions } from "./features/lots";
 import { useEffect, useState } from "react";
+import { lots } from "./utils/mockData";
 
 export const App: React.FC = () => {
-  // const [isLoading, setIsLoading] = useState(true);
-  // const currentTodo = useAppSelector(state => state.currentTodo);
+  // const currentLot = useAppSelector(state => state.currentLot);
   const dispatch = useAppDispatch();
-
-  const setTodos = (todos: Todo[]) => dispatch(todosActions.setTodos(todos));
+  const setLots = (lots: Lot[]) => dispatch(lotsActions.setLots(lots));
 
   useEffect(() => {
-    void getTodos().then((data) => {
-      setTodos(data);
-      // setIsLoading(false);
-    });
+    // void getLots().then((data) => {
+    //   setLots(data ?? []);
+    // });
+    setLots(lots);
   });
 
   return (

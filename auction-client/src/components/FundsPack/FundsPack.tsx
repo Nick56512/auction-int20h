@@ -20,20 +20,16 @@ export const FundsPack: React.FC<Props> = ({ title }) => {
     <section>
       <div className="pack__header">
         <h2 className="pack__title">{title}</h2>
-        <div className="pack__nav-btn">
-          {/* <Button className="icon-button arrow-left"></Button>
-          <Button className="icon-button arrow-right"></Button> */}
-        </div>
       </div>
       <div className="category-pack">
-        <Category title="" imageSrc={prytulaFund} />
-        <Category title="" imageSrc={backAliveFund} />
-        <Category title="" imageSrc={redCrossFund} />
-        <Category title="" imageSrc={tabletochkiFund} />
-        <Category title="" imageSrc={youngDonorsFund} />
-        <Category title="" imageSrc={caritasFund} />
-        <Category title="" imageSrc={hopeShelterFund} />
-        <Category title="" imageSrc={heroesChildrenFund} />
+        <Category imageSrc={prytulaFund} />
+        <Category imageSrc={backAliveFund} />
+        <Category imageSrc={redCrossFund} />
+        <Category imageSrc={tabletochkiFund} />
+        <Category imageSrc={youngDonorsFund} />
+        <Category imageSrc={caritasFund} />
+        <Category imageSrc={hopeShelterFund} />
+        <Category imageSrc={heroesChildrenFund} />
       </div>
     </section>
   );

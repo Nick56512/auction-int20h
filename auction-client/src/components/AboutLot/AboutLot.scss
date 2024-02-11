@@ -1,5 +1,5 @@
-@use "../styles/utils/placeholders";
-@import "../styles/utils/mixins";
+@use "../../styles/utils/placeholders";
+@import "../../styles/utils/mixins";
 
 .lot-page__header {
   display: flex;
@@ -11,7 +11,6 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    gap: 0;
   }
 
   @include onDesktop {

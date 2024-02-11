@@ -2,8 +2,8 @@ import "./Category.scss";
 import { Button } from "../Button";
 
 interface Props {
-  title: string;
-  imageSrc: string;
+  title?: string;
+  imageSrc?: string;
 }
 
 export const Category: React.FC<Props> = ({ title, imageSrc }) => {

@@ -1,43 +1,42 @@
 import React, { useMemo } from "react";
 import { useAppSelector } from "../../app/hooks";
-import { TodoItem } from "../SearchInput/TodoItem";
 
 import "./SearchResults.scss";
+import { LotItem } from "../LotItem";
 
 export const SearchResults: React.FC = () => {
-  const todos = useAppSelector((state) => state.todos);
+  const lots = useAppSelector((state) => state.lots);
   const { query, category } = useAppSelector((state) => state.filter);
 
-  const filteredTodos = useMemo(() => {
-    return todos.filter((todo) => {
-      const includesQuery = todo.title
+  const filteredLots = useMemo(() => {
+    return lots.filter((lot) => {
+      const includesQuery = lot.title
         .toLocaleLowerCase()
         .includes(query.toLocaleLowerCase());
 
       switch (category) {
         case "Усі категорії":
-        default:
           return includesQuery;
 
-        // default:
-        //   return todo.category === category && includesQuery;
+        default:
+          return lot.categoryName === category && includesQuery;
       }
     });
-  }, [category, query, todos]);
+  }, [category, query, lots]);
 
   return (
     <section>
       <div className="search__results">
         <h2 className="search__results-title">Результати пошуку</h2>
       </div>
-      {!filteredTodos.length ? (
+      {!filteredLots.length ? (
         <p className="search__no-results">
           Не знайдено жодного лоту, що відповідає заданим критеріям
         </p>
       ) : (
         <div className="lots-pack">
-          {filteredTodos.map((todo) => (
-            <TodoItem key={todo.id} todo={todo} />
+          {filteredLots.map((lot) => (
+            <LotItem key={lot.id} lot={lot} />
           ))}
         </div>
       )}

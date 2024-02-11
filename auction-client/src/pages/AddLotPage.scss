@@ -32,14 +32,15 @@
   margin: 8px 0 16px;
   padding-left: 16px;
   border-radius: 28px;
-  color: var(--gray-5);
-  @extend %tertiary-text-book;
+  color: var(--gray-6);
+  @extend %tertiary-text-medium;
   border: 2px solid transparent;
   background-color: var(--white);
   transition: all 0.3s ease-in-out;
 
   &::placeholder {
-    padding: 16px 0;
+    color: var(--gray-5);
+    font-weight: 400;
   }
 
   &:focus,
@@ -61,16 +62,17 @@
   resize: vertical;
   outline: none;
   margin: 8px 0 16px;
-  padding-left: 16px;
+  padding: 16px;
   border-radius: 28px;
-  color: var(--gray-5);
-  @extend %secondary-text-book;
+  color: var(--gray-6);
+  @extend %secondary-text-medium;
   border: 2px solid transparent;
   background-color: var(--white);
   transition: all 0.3s ease-in-out;
 
   &::placeholder {
-    padding: 16px 0;
+    color: var(--gray-5);
+    font-weight: 400;
   }
 
   @include onDesktop {

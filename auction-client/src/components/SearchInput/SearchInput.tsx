@@ -16,24 +16,23 @@ export const SearchInput: React.FC = () => {
   const removeQuery = () => dispatch(filterActions.removeQuery());
 
   const [open, setOpen] = useState(false);
-  const todos = useAppSelector((state) => state.todos);
+  const lots = useAppSelector((state) => state.lots);
 
-  const filteredTodos = useMemo(() => {
-    return todos.filter((todo) => {
-      const includesQuery = todo.title
+  const filteredLots = useMemo(() => {
+    return lots.filter((lot) => {
+      const includesQuery = lot.title
         .toLocaleLowerCase()
         .includes(query.toLocaleLowerCase());
 
       switch (category) {
         case "Усі категорії":
-        default:
           return includesQuery;
 
-        // default:
-        //   return todo.category === category && includesQuery;
+        default:
+          return lot.categoryName === category && includesQuery;
       }
     });
-  }, [category, query, todos]);
+  }, [category, query, lots]);
 
   return (
     <div className="input-wrapper">
@@ -51,22 +50,22 @@ export const SearchInput: React.FC = () => {
         <>
           <div className="search-results-wrapper">
             <ul className="search-results">
-              {!filteredTodos.length ? (
+              {!filteredLots.length ? (
                 <li className="search-result">
                   Не знайдено жодного лоту, що відповідає заданим критеріям
                 </li>
               ) : (
                 <>
-                  {filteredTodos.slice(0, 4).map((todo) => (
-                    <li className="search-result" key={todo.id}>
+                  {filteredLots.slice(0, 4).map((lot) => (
+                    <li className="search-result" key={lot.id}>
                       <Link
-                        to={`/lots/${todo.id}`}
+                        to={`/lots/${lot.id}`}
                         onClick={() => {
                           removeQuery();
                           setOpen(false);
                         }}
                       >
-                        {todo.title}
+                        {lot.title}
                       </Link>
                     </li>
                   ))}
