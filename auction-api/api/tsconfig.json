@@ -21,7 +21,7 @@
       "sourceMap": true,
       "typeRoots": ["@types","node_modules/@types"],
       "paths": {
-        "polyData":["../core/build"],
+        "core":["../core/build"],
         "@module/*":["./source/*"]
         }
     },
